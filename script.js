@@ -1,11 +1,3 @@
-let teoria = {};
-
-fetch('teoria.json')
-    .then(res => res.json())
-    .then(data => {
-        teoria = data;
-    })
-
 // --- Variables globales ---
 let preguntas = {};
 let resoluciones = {};
@@ -25,7 +17,7 @@ const resultSection = document.getElementById('resultSection');
 
 // --- Cargar preguntas y resoluciones desde JSON externo ---
 startBtn.disabled = true;
-fetch('preguntas.json')
+fetch('./practica/preguntas.json')
     .then(res => res.json())
     .then(data => {
         if (data && data.preguntas) {
@@ -58,14 +50,17 @@ startBtn.addEventListener('click', () => {
 });
 
 function mostrarTeoria() {
-    const resumen = teoria[tema].resumen.replace(/\n/g, '<br>');
-    const ejemplo = teoria[tema].ejemplo.replace(/\n/g, '<br>');
-    contentSection.innerHTML = `
-        <h2>${capitalizar(tema)}</h2>
-        <p><b>Resumen:</b> ${resumen}</p>
-        <p><b>Ejemplo:</b> ${ejemplo}</p>
-    `;
-    if (window.MathJax) MathJax.typesetPromise();
+    // Carga el archivo HTML correspondiente al tema
+    const archivo = `./teoria/teoria${capitalizar(tema)}.html`;
+    fetch(archivo)
+        .then(res => res.text())
+        .then(html => {
+            contentSection.innerHTML = html;
+            if (window.MathJax) MathJax.typesetPromise([contentSection]);
+        })
+        .catch(() => {
+            contentSection.innerHTML = '<p>No se pudo cargar la teoría para este tema.</p>';
+        });
 }
 
 function iniciarPractica() {
@@ -73,7 +68,7 @@ function iniciarPractica() {
         contentSection.innerHTML = '<p>No hay preguntas para este tema.</p>';
         return;
     }
-    preguntasActuales = [...preguntas[tema]];
+    preguntasActuales = mezclarArray(preguntas[tema]).slice(0, 10);
     mostrarPreguntas(preguntasActuales, false);
 }
 
