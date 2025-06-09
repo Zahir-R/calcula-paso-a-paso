@@ -16,6 +16,11 @@ h1 {
     text-align: center;
     color: #2a3a5a;
 }
+
+.texto {
+    color: #333;
+    line-height: 1.6;
+}
 #modeSelector {
     display: flex;
     gap: 1rem;
@@ -124,6 +129,16 @@ label {
 .MathJax {
     font-size: 1.1em !important;
     color: #2c3e50 !important;
+}
+
+.exampleHeadings{
+    font-weight: bold;
+    color: #2a3a5a;
+    margin-top: 1.5rem;
+}
+
+.examples {
+    text-align: center;
 }
 
 /* Modal styles */
