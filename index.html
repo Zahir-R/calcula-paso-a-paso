@@ -18,11 +18,11 @@
     </style>
     
     <!-- Load non-critical CSS asynchronously -->
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./assets/css/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
     <!-- Preload important resources -->
-    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="./assets/js/main.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" as="script">
 </head>
 <body>
@@ -47,16 +47,9 @@
         <section id="contentSection" style="display:none;"></section>
         <section id="resultSection" style="display:none;"></section>
     </main>
-
-    <!-- Conditional polyfill loading -->
-    <script>
-        if (!('Promise' in window) || !('fetch' in window)) {
-            document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=es6,Promise,fetch"><\/script>');
-        }
-    </script>
     
     <!-- Deferred scripts -->
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script defer src="script.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>
