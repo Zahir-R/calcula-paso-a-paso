@@ -64,7 +64,7 @@ label {
 }
 .option-label {
     display: block;
-    margin: 0.3em 0;
+    padding: 0.7em 0;
     border-radius: 6px;
     overflow-x:auto;
     overflow-y: hidden;
