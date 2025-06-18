@@ -16,7 +16,6 @@ h1 {
     text-align: center;
     color: #2a3a5a;
 }
-
 .texto {
     color: #333;
     line-height: 1.6;
@@ -62,6 +61,11 @@ button:hover {
 }
 label {
     cursor: pointer;
+}
+.option-label {
+    display: block;
+    margin: 0.3em 0;
+    border-radius: 6px;
 }
 .detalle-error {
     background: #ffeaea;
