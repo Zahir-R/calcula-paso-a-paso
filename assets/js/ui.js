@@ -1,4 +1,4 @@
-import { resoluciones, preguntas } from './preguntas.js';
+import { preguntas } from './preguntas.js';
 import { capitalizar } from './utils.js';
 
 let respuestasUsuario = [];
