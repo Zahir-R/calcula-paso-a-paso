@@ -12,9 +12,10 @@ export function mostrarPreguntas(lista, esSimulacro) {
     let html = '';
 
     if (esSimulacro) {
-        tiempoRestante = 600;
-        html += `<div id="timer">Tiempo restante: <span id="tiempo">${tiempoRestante}</span> s</div>`;
+        tiempoRestante = 1800;
+
         iniciarTemporizador();
+        html += `<div id="timer">Tiempo restante: <span id="tiempo">${mostrarTiempoRestante(tiempoRestante)}</span> s</div>`;
     }
 
     lista.forEach((q, i) => {
@@ -149,13 +150,19 @@ async function mostrarResolucion(idx, lista) {
 
 function iniciarTemporizador() {
     timer = setInterval(() => {
+        document.getElementById('tiempo').textContent = mostrarTiempoRestante(tiempoRestante - 1);
         tiempoRestante--;
-        document.getElementById('tiempo').textContent = tiempoRestante;
         if (tiempoRestante <= 0) {
             clearInterval(timer);
             corregir(preguntasActuales, true);
         }
     }, 1000);
+}
+
+function mostrarTiempoRestante(segundosRestantes){
+    const minutes = Math.floor(segundosRestantes / 60);
+    const segundos = segundosRestantes % 60;
+    return `${minutes.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
 }
 
 function obtenerTemaPregunta(q) {
