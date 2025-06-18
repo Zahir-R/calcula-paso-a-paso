@@ -162,7 +162,7 @@ label {
     text-align: left;
     max-height: 80vh;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 .resolucion-text {
     margin: 1rem 0 2rem 0;
