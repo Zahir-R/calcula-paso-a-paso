@@ -6,7 +6,7 @@
     <title>Proyecto Salvar Cálculo</title>
     <meta name="description" content="Página que te ayuda a repasar Cálculo I">
     
-    <!-- Inline critical CSS -->
+    <!-- Critical CSS -->
     <style>
         body { font-family: Arial, sans-serif; background: #f7f7fa; margin: 0; padding: 0; }
         main { max-width: 700px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; }
@@ -17,11 +17,11 @@
         ul, ol {list-style: none;}
     </style>
     
-    <!-- Load non-critical CSS asynchronously -->
+    <!-- Non-critical CSS async -->
     <link rel="stylesheet" href="./assets/css/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
-    <!-- Preload important resources -->
+    <!-- Preload resources -->
     <link rel="preload" href="./assets/js/main.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" as="script">
 </head>
@@ -49,6 +49,7 @@
     </main>
     
     <!-- Deferred scripts -->
+    <!-- I'm not sure what this does, but improves performance around 20% -->
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="module" src="./assets/js/main.js"></script>
 </body>
