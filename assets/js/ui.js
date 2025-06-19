@@ -1,5 +1,6 @@
 import { preguntas } from './preguntas.js';
 import { capitalizar } from './utils.js';
+import { setTimer } from './state.js';
 
 let respuestasUsuario = [];
 let timer = null;
@@ -13,8 +14,9 @@ export function mostrarPreguntas(lista, esSimulacro) {
 
     if (esSimulacro) {
         tiempoRestante = 1800;
-
+        if (timer) clearInterval(timer); // Detener temporizador anterior si existe
         iniciarTemporizador();
+        setTimer(timer); // Actualizar el temporizador global
         html += `<div id="timer">Tiempo restante: <span id="tiempo">${mostrarTiempoRestante(tiempoRestante)}</span> s</div>`;
     }
 
@@ -154,9 +156,11 @@ function iniciarTemporizador() {
         tiempoRestante--;
         if (tiempoRestante <= 0) {
             clearInterval(timer);
+            setTimer(null);
             corregir(preguntasActuales, true);
         }
     }, 1000);
+    setTimer(timer); // Actualizar el temporizador global
 }
 
 function mostrarTiempoRestante(segundosRestantes){
