@@ -64,9 +64,9 @@ label {
 }
 .option-label {
     display: block;
-    padding: 0.7em 0;
+    padding: 0.3em 0;
     border-radius: 6px;
-    overflow-x:auto;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 .detalle-error {
@@ -111,6 +111,8 @@ label {
     margin: 0.3rem 0;
     border-radius: 3px;
     position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .correct-answer {
@@ -133,8 +135,8 @@ label {
 }
 
 .MathJax {
-    font-size: 1.1em !important;
-    color: #2c3e50 !important;
+    font-size: 1.1em;
+    color: #2c3e50;
 }
 
 .exampleHeadings{
@@ -145,6 +147,8 @@ label {
 
 .examples {
     text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 /* Modal styles */
