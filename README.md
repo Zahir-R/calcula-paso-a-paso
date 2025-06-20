@@ -52,4 +52,4 @@ salvar-calculo/
 3. Presiona el botón de comenzar para desplegar el modo seleccionado
 
 ## Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo (LICENSE) para más detalles.
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
