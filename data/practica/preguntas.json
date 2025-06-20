@@ -270,6 +270,61 @@
           "\\( \\frac{1}{2} e^x[ (x^2 - 1)\\cos{x} + (x^2 - 2x + 1) \\sin{x}] + C \\)"
         ],
         "respuesta": 1
+      },
+      {
+        "id": "i9",
+        "pregunta": "Hallar \\( \\int \\frac{1-x^4}{1+x^2} \\, dx \\)",
+        "opciones": [
+          "\\( \\frac{x^5}{5} - x + \\arctan{x} + C \\)",
+          "\\( x - \\frac{x^3}{3} + C \\)",
+          "\\( \\frac{1}{2}\\ln{(1+x^2)} - x^2 + C \\)",
+          "\\( \\arctan{x} - x^3 + 2x + C \\)"
+        ],
+        "respuesta": 1
+      },
+      {
+        "id": "i10",
+        "pregunta": "Hallar \\( \\int \\frac{6x^3}{x - 1} \\, dx \\)",
+        "opciones": [
+          "\\( 6x^2 + 12x + 12 \\ln{|x - 1|} + C \\)",
+          "\\( 2x^3 + 6x^2 + 6x + 6 \\ln{|x - 1|} + C \\)",
+          "\\( 3x^3 + 3x^2 + 6x + 6 \\ln{|x - 1|} + C \\)",
+          "\\( 2x^3 + 3x^2 + 6x + 6 \\ln{|x - 1|} + C \\)"
+        ],
+        "respuesta": 3
+      },
+      {
+        "id": "i11",
+        "pregunta": "Hallar \\( \\int e^x 3^x \\, dx \\)",
+        "opciones": [
+          "\\( \\frac{3^xe^x}{\\ln{3} + 1} + C \\)",
+          "\\( \\frac{e^x 3^x}{\\ln{(3e)}} + C \\)",
+          "\\( (\\ln{3} + 1)e^x 3^x + C \\)",
+          "\\( \\frac{3^{x+1} e^{x+1}}{x+1} + C \\)"
+        ],
+        "respuesta": 0
+      },
+      {
+        "id": "i12",
+        "pregunta": "Hallar \\( \\int \\sqrt{ax} \\, dx \\)",
+        "opciones": [
+          "\\( \\frac{4}{9} \\sqrt{a^3x^3} + C \\)",
+          "\\( \\frac{2}{3} a \\sqrt{x^3} + C \\)",
+          "\\( \\frac{2}{3} \\sqrt{a x^3} + C \\)",  
+          "\\( -\\frac{2}{\\sqrt{ax}} + C \\)"
+        ],
+        "respuesta": 2
+      },
+      {
+        "id": "i13",
+        "pregunta": "Hallar \\( \\int x^{(1 - n) / n } \\, dx \\)",
+        "opciones": [
+          "\\( \\frac{n}{1-n} \\sqrt[n]{x} + C \\)",
+          "\\( n \\sqrt[n]{x} + C \\)", 
+          "\\( \\frac{1}{n} \\sqrt[n]{x} + C \\)",
+          "\\( \\sqrt[n]{x} + C \\)"
+        ],
+        "respuesta": 1
       }
     ]
   }
