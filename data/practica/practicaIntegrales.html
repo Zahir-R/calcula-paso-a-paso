@@ -88,8 +88,9 @@
     <p class="texto examples">\( = \frac{2}{3}u^{3/2} - 2u^{1/2} + C \)</p>
     <p class="texto">6. Sustituimos de vuelta \( u = e^x + 1 \):</p>
     <p class="texto examples">\( = \frac{2}{3}(e^x + 1)^{3/2} - 2(e^x + 1)^{1/2} + C \)</p>
-    <p class="texto">7. Ajustar la respuesta en radicales:</p>
+    <p class="texto">7. Forma alternativa con radicales:</p>
     <p class="texto examples">\( = \frac{2}{3}\sqrt{(e^x + 1)^3} - 2\sqrt{e^x + 1} + C \)</p>
+    <p class="texto examples">\( = \frac{2}{3}(e^x + 1)\sqrt{e^x + 1} - 2\sqrt{e^x + 1} + C \)</p>
 </div>
 
 <div id="resolucion-i6">
@@ -179,12 +180,71 @@
 </div>
 
 <div id="resolucion-i9">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto examples">\( \int \frac{1-x^4}{1+x^2} \, dx \)</p>
+    <p class="texto">1. Simplificación algebraica</p>
+    <p class="texto">Factorizamos el numerador:</p>
+    <p class="texto examples">\( 1 - x^4 = (1 + x^2)(1 - x^2) \)</p>
+    <p class="texto">Reescribimos la integral:</p>
+    <p class="texto examples">\( \int \frac{(1 + x^2)(1 - x^2)}{1 + x^2} \, dx = \int (1 - x^2) \, dx \)</p>
+    <p class="texto">2. Integración término a término</p>
+    <p class="texto examples">\( \int 1 \, dx - \int x^2 \, dx \)</p>
+    <p class="texto examples">\( = x - \frac{x^3}{3} + C \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( x - \frac{x^3}{3} + C \)</p>
 </div>
+
 <div id="resolucion-i10">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto examples">\( \int \frac{6x^3}{x-1} \, dx \)</p>
+    <p class="texto">1. Dividimos \( 6x^3 / (x-1) \)</p>
+    <p class="texto examples">\( \frac{6x^3}{x-1} = 6x^2 + 6x + 6 + \frac{6}{x-1} \)</p>
+    <p class="texto">2. Integración término a término</p>
+    <p class="texto examples">\( \int (6x^2 + 6x + 6 + \frac{6}{x-1}) \, dx \)</p>
+    <p class="texto examples">\( = 2x^3 + 3x^2 + 6x + 6 \ln{|x-1|} + C \)</p>
+</div>
+
+<div id="resolucion-i11">
+    <p class="texto examples">\( \int e^x 3^x \, dx \)</p>
+    <p class="texto">1. Combinar las funciones exponenciales</p>
+    <p class="texto">Reescribimos el integrando usando propiedades de exponentes:</p>
+    <p class="texto examples">\( e^x 3^x = (e \cdot 3)^x = (3e)^x \)</p>
+    <p class="texto">2. Aplicar la fórmula para integral de funciones exponenciales</p>
+    <p class="texto examples">\( \int a^x \, dx = \frac{a^x}{\ln{a}} + C \)</p>
+    <p class="texto">Aplicamos esta fórmula con \( a = 3e \):</p>
+    <p class="texto examples">\( \int (3e)^x \, dx = \frac{(3e)^x}{\ln{(3e)}} + C \)</p>
+    <p class="texto">3. Simplificamos el denominador</p>
+    <p class="texto">Descomponemos el logaritmo:</p>
+    <p class="texto examples">\( \ln{(3e)} = \ln{3} + \ln{e} = \ln{3} + 1 \)</p>
+    <p class="texto">Por lo tanto:</p>
+    <p class="texto examples">\( \frac{(3e)^x}{\ln{(3e)}} = \frac{(3e)^x}{\ln{3} + 1} \)</p>
+    <p class="texto">4. Revertir a la forma original</p>
+    <p class="texto">Volvemos a expresar \( (3e)^x \) como \( e^x 3^x \):</p>
+    <p class="texto examples">\( \frac{(3e)^x}{\ln{3} + 1} + C = \frac{e^x 3^x}{\ln{3} + 1} + C \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( \frac{e^x 3^x}{\ln{3} + 1} + C \)</p>
+</div>
+
+<div id="resolucion-i12">
+    <p class="texto examples">\( \int \sqrt{ax} \, dx \)</p>
+    <p class="texto">1. Identificamos \( a \) como constante y reescribimos la expresión</p>
+    <p class="texto examples">\( \int \sqrt{a}\sqrt{x} \, dx \)</p>
+    <p class="texto examples">\( \sqrt{a} \int \sqrt{x} \, dx \)</p>
+    <p class="texto">2. Reescribimos \( \sqrt{x} \) como \( x^{1/2} \)</p>
+    <p class="testo examples">\( \sqrt{a} \int x^{1/2} \, dx \)</p>
+    <p class="texto">3. Resolvemos la integral por la regla de la potencia</p>
+    <p class="texto examples">\( \sqrt{a} \frac{x^{1/2 + 1}}{1/2 + 1} + C\)</p>
+    <p class="texto examples">\( \sqrt{a} \frac{2x^{3/2}}{3} = \sqrt{a} \frac{2}{3} \sqrt{x^3} + C\)</p>
+    <p class="texto">4. Reordenamos la solución</p>
+    <p class="texto examples">\( \frac{2}{3} \sqrt{ax^3} + C \)</p>
+</div>
+
+<div id="resolucion-i13">
+    <p class="texto examples">\( \int x^{(1-n)/n} \, dx \)</p>
+    <p class="texto">1. Aplicar regla de potencia</p>
+    <p class="texto examples">\( \int x^m \, dx = \frac{x^{m+1}}{m+1} + C \) donde \( m = \frac{1-n}{n} \)</p>
+    <p class="texto">2. Sumar 1 al exponente</p>
+    <p class="texto examples">\( m + 1 = \frac{1-n}{n} + 1 = \frac{1}{n} \)</p>
+    <p class="texto">3. Integrar</p>
+    <p class="texto examples">\( \frac{x^{1/n}}{1/n} + C = n x^{1/n} + C \)</p>
+    <p class="texto">4. Forma alternativa</p>
+    <p class="texto examples">\( n \sqrt[n]{x} + C \)</p>
 </div>
