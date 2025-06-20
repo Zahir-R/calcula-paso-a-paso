@@ -1,4 +1,4 @@
-# 📚 Proyecto Salvar Cálculo
+# Proyecto Salvar Cálculo
 
 Herramienta interactiva para practicar cálculo diferencial e integral, diseñada para estudiantes universitarios. Incluye modos de estudio, práctica y simulacro con retroalimentación inmediata.
 
@@ -31,7 +31,7 @@ Herramienta interactiva para practicar cálculo diferencial e integral, diseñad
 - **Hosting**: GitHub Pages
 
 ## Estructura del proyecto
-'''
+```
 salvar-calculo/
 ├── assets/
 │ ├── css/ # Estilos principales
@@ -41,7 +41,7 @@ salvar-calculo/
 │ └── teoria/ # Archivos HTML con teoría
 ├── index.html # Punto de entrada
 └── LICENSE # Licencia MIT
-'''
+```
 
 ## Cómo usar
 1. Selecciona un modo:
