@@ -7,9 +7,8 @@ Herramienta interactiva para practicar cálculo diferencial e integral, diseñad
 ## Características principales
 
 ### Modo Estudio
-- Teoría organizada por temas (límites, derivadas, integrales)
+- Teoría organizada por temas (funciones, límites, derivadas e integrales)
 - Ejemplos resueltos con MathJax para visualizar fórmulas
-- Explicaciones paso a paso
 
 ###  Modo Práctica
 - Ejercicios aleatorios del tema seleccionado
