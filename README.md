@@ -34,13 +34,13 @@ Herramienta interactiva para practicar cálculo diferencial e integral, diseñad
 ```
 salvar-calculo/
 ├── assets/
-│ ├── css/ # Estilos principales
-│ ├── js/ # Código modularizado
+│ ├── css/               # Estilos principales
+│ ├── js/                # Código modularizado
 ├── data/
-│ ├── practica/ # Banco de preguntas y respuestas
-│ └── teoria/ # Archivos HTML con teoría
-├── index.html # Punto de entrada
-└── LICENSE # Licencia MIT
+│ ├── practica/          # Banco de preguntas y respuestas
+│ └── teoria/            # Archivos HTML con teoría
+├── index.html           # Punto de entrada
+└── LICENSE              # Licencia MIT
 ```
 
 ## Cómo usar
