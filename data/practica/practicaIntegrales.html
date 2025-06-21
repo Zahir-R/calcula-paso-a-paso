@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+
+<div id="resolucion-i1">
+    <p class="texto examples">\( \int 6(x^5 + 5^x + 5x + 5) \, dx \)</p>
+    <p class="texto">Distribuimos la constante 6 dentro del paréntesis:</p>
+    <p class="texto examples">\( \int 6 \cdot x^5 \, dx + \int 6 \cdot 5^x \, dx + \int 6 \cdot 5x \, dx + \int 6 \cdot 5 \, dx \)</p>
+    <p class="texto">Resolvemos cada integral por separado:</p>
+    <p class="texto">1. Para el término \( x^5 \):</p>
+    <p class="texto examples">\( 6\int x^5 \, dx = 6 \cdot \frac{x^{5+1}}{5+1} = 6 \cdot \frac{x^6}{6} = x^6 \)</p>    
+    <p class="texto">2. Para el término exponencial \( 5^x \):</p>
+    <p class="texto examples">\( 6\int 5^x \, dx = 6 \cdot \frac{5^x}{\ln{5}} \)</p>
+    <p class="texto">3. Para el término lineal \( 5x \):</p>
+    <p class="texto examples">\( 6\int 5x \, dx = 6 \cdot 5 \cdot \frac{x^2}{2} = 15x^2 \)</p>
+    <p class="texto">4. Para la constante 5:</p>
+    <p class="texto examples">\( 6\int 5 \, dx = 6 \cdot 5x = 30x \)</p>
+    <p class="texto">Combinamos todos los resultados y añadimos la constante de integración C:</p>
+    <p class="texto examples">\( x^6 + 6 \cdot \frac{5^x}{\ln{5}} + 15x^2 + 30x + C \)</p>
+</div>
+
+<div id="resolucion-i2">
+    <p class="texto examples">\( \int 60(\sqrt[5]{x} + \frac{1}{x^5} + \frac{5}{x} + \frac{x}{5}) \, dx \)</p>
+    <p class="texto">Distribuimos la constante 60 dentro del paréntesis:</p>
+    <p class="texto examples">\( 60\int \sqrt[5]{x} \, dx + 60\int x^{-5} \, dx + 60\int \frac{5}{x} \, dx + 60\int \frac{x}{5} \, dx \)</p>
+    <p class="texto">Resolvemos cada integral por separado:</p>
+    <p class="texto">1. Para el término con raíz quinta, convertimos a exponente:</p>
+    <p class="texto examples">\( 60\int x^{1/5} \, dx = 60 \cdot \frac{x^{(1/5)+1}}{(1/5)+1} = 60 \cdot \frac{x^{6/5}}{6/5} = 50x^{6/5} = 50\sqrt[5]{x^6} \)</p>
+    <p class="texto">2. Para el término \( x^{-5} \):</p>
+    <p class="texto examples">\( 60\int x^{-5} \, dx = 60 \cdot \frac{x^{-5+1}}{-5+1} = 60 \cdot \frac{x^{-4}}{-4} = -15x^{-4} \)</p>
+    <p class="texto">3. Para el término \( \frac{5}{x} \):</p>
+    <p class="texto examples">\( 60 \cdot 5 \int \frac{1}{x} \, dx = 300 \ln{|x|} \)</p>
+    <p class="texto">4. Para el término \( \frac{x}{5} \):</p>
+    <p class="texto examples">\( \frac{60}{5} \int x \, dx = 12 \cdot \frac{x^2}{2} = 6x^2 \)</p>
+    <p class="texto">Combinamos todos los resultados y añadimos la constante de integración C:</p>
+    <p class="texto examples">\( 50\sqrt[5]{x^6} - 15x^{-4} + 300\ln{|x|} + 6x^2 + C \)</p>
+    <p class="texto">Podemos reescribir \( x^{-4} \) como \( \frac{1}{x^4} \) para presentación alternativa:</p>
+    <p class="texto examples">\( 50\sqrt[5]{x^6} - \frac{15}{x^4} + 300\ln{|x|} + 6x^2 + C \)</p>
+</div>
+
+<div id="resolucion-i3">
+    <p class="texto examples">\( \int \frac{\sqrt{x} + \sqrt[3]{x}}{x} \, dx \)</p>
+    <p class="texto">1. Simplificamos la expresión algebraica:</p>
+    <p class="texto examples">\( = \int \left( \frac{\sqrt{x}}{x} + \frac{\sqrt[3]{x}}{x} \right) dx \)</p>
+    <p class="texto examples">\( = \int \left( x^{1/2} \cdot x^{-1} + x^{1/3} \cdot x^{-1} \right) dx \)</p>
+    <p class="texto examples">\( = \int \left( x^{-1/2} + x^{-2/3} \right) dx \)</p>
+    <p class="texto">2. Aplicamos la regla de la potencia para cada término:</p>
+    <p class="texto">Primer término (\( x^{-1/2} \)):</p>
+    <p class="texto examples">\( \int x^{-1/2} dx = \frac{x^{(-1/2)+1}}{(-1/2)+1} = \frac{x^{1/2}}{1/2} = 2\sqrt{x} \)</p>
+    <p class="texto">Segundo término (\( x^{-2/3} \)):</p>
+    <p class="texto examples">\( \int x^{-2/3} dx = \frac{x^{(-2/3)+1}}{(-2/3)+1} = \frac{x^{1/3}}{1/3} = 3\sqrt[3]{x} \)</p>
+    <p class="texto">3. Combinamos los resultados y añadimos la constante de integración:</p>
+    <p class="texto examples">\( 2\sqrt{x} + 3\sqrt[3]{x} + C \)</p>
+</div>
+
+<div id="resolucion-i4">
+    <p class="texto examples">\( \int \frac{10x}{\sqrt{3+5x^2}} \, dx \)</p>
+    <p class="texto">1. Identificamos la sustitución adecuada:</p>
+    <p class="texto examples">Sea \( u = 3 + 5x^2 \)</p>
+    <p class="texto">2. Calculamos el diferencial:</p>
+    <p class="texto examples">\( du = 10x \, dx \)</p>
+    <p class="texto">3. Realizamos la sustitución:</p>
+    <p class="texto examples">\( \int \frac{du}{\sqrt{u}} = \int u^{-1/2} \, du \)</p>
+    <p class="texto">4. Aplicamos la regla de potencia para integración:</p>
+    <p class="texto examples">\( \int u^{-1/2} \, du = \frac{u^{(-1/2)+1}}{(-1/2)+1} = \frac{u^{1/2}}{1/2} = 2u^{1/2} \)</p>
+    <p class="texto">5. Simplificamos el resultado:</p>
+    <p class="texto examples">\( 2\sqrt{u} + C \)</p>
+    <p class="texto">6. Sustituimos de vuelta la expresión original:</p>
+    <p class="texto examples">\( 2\sqrt{3+5x^2} + C \)</p>
+</div>
+
+<div id="resolucion-i5">
+    <p class="texto examples">\( \int \frac{e^{2x}}{\sqrt{e^x + 1}} \, dx \)</p>
+    <p class="texto">1. Aplicamos sustitución:</p>
+    <p class="texto examples">Sea \( u = e^x + 1 \)</p>
+    <p class="texto examples">Entonces \( du = e^x dx \) ⇒ \( dx = \frac{du}{e^x} \)</p>
+    <p class="texto">2. Reescribimos la integral original:</p>
+    <p class="texto examples">\( = \int \frac{e^{2x}}{\sqrt{u}} \cdot \frac{du}{e^x} \)</p>
+    <p class="texto examples">\( = \int \frac{e^x}{\sqrt{u}} du \)</p>
+    <p class="texto">3. Expresamos \( e^x \) en términos de \( u \):</p>
+    <p class="texto examples">Como \( u = e^x + 1 \) ⇒ \( e^x = u - 1 \)</p>
+    <p class="texto examples">\( = \int \frac{u - 1}{\sqrt{u}} du \)</p>
+    <p class="texto">4. Separamos en dos integrales:</p>
+    <p class="texto examples">\( = \int \left( \frac{u}{\sqrt{u}} - \frac{1}{\sqrt{u}} \right) du \)</p>
+    <p class="texto examples">\( = \int u^{1/2} du - \int u^{-1/2} du \)</p>
+    <p class="texto">5. Resolvemos cada integral:</p>
+    <p class="texto examples">\( = \frac{u^{3/2}}{3/2} - \frac{u^{1/2}}{1/2} + C \)</p>
+    <p class="texto examples">\( = \frac{2}{3}u^{3/2} - 2u^{1/2} + C \)</p>
+    <p class="texto">6. Sustituimos de vuelta \( u = e^x + 1 \):</p>
+    <p class="texto examples">\( = \frac{2}{3}(e^x + 1)^{3/2} - 2(e^x + 1)^{1/2} + C \)</p>
+    <p class="texto">7. Forma alternativa con radicales:</p>
+    <p class="texto examples">\( = \frac{2}{3}\sqrt{(e^x + 1)^3} - 2\sqrt{e^x + 1} + C \)</p>
+    <p class="texto examples">\( = \frac{2}{3}(e^x + 1)\sqrt{e^x + 1} - 2\sqrt{e^x + 1} + C \)</p>
+</div>
+
+<div id="resolucion-i6">
+    <p class="texto examples">\( \int e^{\sin{x}} \cos{x} \, dx \)</p>
+    <p class="texto">1. Aplicamos sustitución:</p>
+    <p class="texto examples">Sea \( u = \sin{x} \)</p>
+    <p class="texto examples">Entonces \( du = \cos{x} \, dx \)</p>
+    <p class="texto">2. Reescribimos la integral:</p>
+    <p class="texto examples">\( \int e^u \, du \)</p>
+    <p class="texto">3. Resolvemos la integral exponencial:</p>
+    <p class="texto examples">\( e^u + C \)</p>
+    <p class="texto">4. Sustituimos de vuelta \( u = \sin{x} \):</p>
+    <p class="texto examples">\( e^{\sin{x}} + C \)</p>
+</div>
+
+<div id="resolucion-i7">
+    <p class="texto examples">\( \int x \cdot e^{x^2 - 1} \, dx \)</p>
+    <p class="texto">1. Aplicamos sustitución:</p>
+    <p class="texto examples">Sea \( u = x^2 - 1 \)</p>
+    <p class="texto examples">Entonces \( du = 2x \, dx \) ⇒ \( dx = \frac{du}{2x} \)</p>
+    <p class="texto">2. Reescribimos la integral:</p>
+    <p class="texto examples">\( \int x \cdot e^u \cdot \frac{du}{2x} \)</p>
+    <p class="texto examples">\( = \frac{1}{2} \int e^u \, du \)</p>
+    <p class="texto">3. Resolvemos la integral exponencial:</p>
+    <p class="texto examples">\( \frac{1}{2} e^u + C \)</p>
+    <p class="texto">4. Sustituimos de vuelta \( u = x^2 - 1 \):</p>
+    <p class="texto examples">\( \frac{1}{2} e^{x^2 - 1} + C \)</p>
+</div>
+
+<div id="resolucion-i8">
+    <p class="texto examples">\( \int x^2 e^x \sin{x} \, dx \)</p>
+    <p class="texto">1. Primera integración por partes</p>
+    <p class="texto">Elegimos:</p>
+    <p class="texto examples">\( u = x^2 \) ⇒ \( du = 2x \, dx \)</p>
+    <p class="texto examples">\( dv = e^x \sin{x} \, dx \) ⇒ \( v = \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto">Aplicamos \( \int u \, dv = uv - \int v \, du \):</p>
+    <p class="texto examples">\( \int x^2 e^x \sin{x} \, dx = \frac{x^2 e^x (\sin{x} - \cos{x})}{2} - \int \frac{e^x (\sin{x} - \cos{x})}{2} \cdot 2x \, dx \)</p>
+    <p class="texto examples">\( = \frac{x^2 e^x (\sin{x} - \cos{x})}{2} - \int x e^x (\sin{x} - \cos{x}) \, dx \)</p>
+    <p class="texto">2. Separamos la integral resultante</p>
+    <p class="texto examples">\( = \frac{x^2 e^x (\sin{x} - \cos{x})}{2} - \left( \int x e^x \sin{x} \, dx - \int x e^x \cos{x} \, dx \right) \)</p>
+    <p class="texto">3. Resolvemos \( \int x e^x \sin{x} \, dx \) por partes</p>
+    <p class="texto">Elegimos:</p>
+    <p class="texto examples">\( u = x \) ⇒ \( du = dx \)</p>
+    <p class="texto examples">\( dv = e^x \sin{x} \, dx \) ⇒ \( v = \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto">Resultado:</p>
+    <p class="texto examples">\( \int x e^x \sin{x} \, dx = \frac{x e^x (\sin{x} - \cos{x})}{2} - \int \frac{e^x (\sin{x} - \cos{x})}{2} \, dx \)</p>
+    <p class="texto">Calculamos la nueva integral:</p>
+    <p class="texto examples">\( \int e^x \sin{x} \, dx = \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto examples">\( -\int e^x \cos{x} \, dx = -\frac{e^x (\sin{x} + \cos{x})}{2} \)</p>
+    <p class="texto">Combinando:</p>
+    <p class="texto examples">\( \int x e^x \sin{x} \, dx = \frac{x e^x (\sin{x} - \cos{x})}{2} - \frac{e^x (\sin{x} - \cos{x} - \sin{x} - \cos{x})}{4} \)</p>
+    <p class="texto examples">\( = \frac{x e^x (\sin{x} - \cos{x})}{2} + \frac{e^x \cos{x}}{2} \)</p>
+    <p class="texto">4. Resolvemos \( \int x e^x \cos{x} \, dx \) por partes</p>
+    <p class="texto">Elegimos:</p>
+    <p class="texto examples">\( u = x \) ⇒ \( du = dx \)</p>
+    <p class="texto examples">\( dv = e^x \cos{x} \, dx \) ⇒ \( v = \frac{e^x (\sin{x} + \cos{x})}{2} \)</p>
+    <p class="texto">Resultado:</p>
+    <p class="texto examples">\( \int x e^x \cos{x} \, dx = \frac{x e^x (\sin{x} + \cos{x})}{2} - \int \frac{e^x (\sin{x} + \cos{x})}{2} \, dx \)</p>
+    <p class="texto">Calculamos la nueva integral:</p>
+    <p class="texto examples">\( \int e^x \sin{x} \, dx = \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto examples">\( \int e^x \cos{x} \, dx = \frac{e^x (\sin{x} + \cos{x})}{2} \)</p>
+    <p class="texto">Combinando:</p>
+    <p class="texto examples">\( \int x e^x \cos{x} \, dx = \frac{x e^x (\sin{x} + \cos{x})}{2} - \frac{e^x (\sin{x} - \cos{x} + \sin{x} + \cos{x})}{4} \)</p>
+    <p class="texto examples">\( = \frac{x e^x (\sin{x} + \cos{x})}{2} - \frac{e^x \sin{x}}{2} \)</p>
+    <p class="texto">5. Sustituimos todo de vuelta</p>
+    <p class="texto">Retomamos la expresión del Paso 2:</p>
+    <p class="texto examples">\( \frac{x^2 e^x (\sin{x} - \cos{x})}{2} - \left\{ \left[ \frac{x e^x (\sin{x} - \cos{x})}{2} + \frac{e^x \cos{x}}{2} \right] - \left[ \frac{x e^x (\sin{x} + \cos{x})}{2} - \frac{e^x \sin{x}}{2} \right]\right\} \)</p>
+    <p class="texto">6. Simplificamos paso a paso</p>
+    <p class="texto">Primero simplificamos dentro del paréntesis:</p>
+    <p class="texto examples">\( \frac{x e^x (\sin{x} - \cos{x})}{2} - \frac{x e^x (\sin{x} + \cos{x})}{2} + \frac{e^x \sin{x}}{2} - \frac{e^x \cos{x}}{2} \)</p>
+    <p class="texto examples">\( = \frac{x e^x \sin{x} - x e^x \cos{x} - x e^x \sin{x} - x e^x \cos{x}}{2} + \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto examples">\( = \frac{-2x e^x \cos{x}}{2} + \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto examples">\( = -x e^x \cos{x} + \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto">Ahora sustituimos de vuelta en la expresión completa:</p>
+    <p class="texto examples">\( \frac{x^2 e^x (\sin{x} - \cos{x})}{2} - \left( -x e^x \cos{x} + \frac{e^x (\sin{x} - \cos{x})}{2} \right) \)</p>
+    <p class="texto examples">\( = \frac{x^2 e^x (\sin{x} - \cos{x})}{2} + x e^x \cos{x} - \frac{e^x (\sin{x} - \cos{x})}{2} \)</p>
+    <p class="texto examples">\( = \frac{e^x (x^2 \sin{x} - x^2 \cos{x} - \sin{x} + \cos{x})}{2} + x e^x \cos{x} \)</p>
+    <p class="texto">Agrupamos términos:</p>
+    <p class="texto examples">\( = \frac{e^x [(x^2 - 1)\sin{x} + (-x^2 + 1)\cos{x}]}{2} + x e^x \cos{x} \)</p>
+    <p class="texto examples">\( = \frac{e^x (x^2 - 1)\sin{x}}{2} + \frac{e^x (1 - x^2)\cos{x}}{2} + x e^x \cos{x} \)</p>
+    <p class="texto examples">\( = \frac{e^x (x^2 - 1)\sin{x}}{2} + e^x \cos{x} \left( \frac{1 - x^2}{2} + x \right) \)</p>
+    <p class="texto examples">\( = \frac{e^x (x^2 - 1)\sin{x}}{2} + e^x \cos{x} \left( \frac{-x^2 + 2x + 1}{2} \right) \)</p>
+    <p class="texto examples">\( = \frac{e^x}{2} \left[ (x^2 - 1)\sin{x} - (x^2 - 2x - 1)\cos{x} \right] \)</p>
+    <p class="texto examples">\( = \frac{e^x}{2} \left[ (x^2 - 1)\sin{x} - (x - 1)^2 \cos{x} \right] + C \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( \frac{1}{2} e^x \left[ (x^2 - 1)\sin{x} - (x - 1)^2 \cos{x} \right] + C \)</p>
+</div>
+
+<div id="resolucion-i9">
+    <p class="texto examples">\( \int \frac{1-x^4}{1+x^2} \, dx \)</p>
+    <p class="texto">1. Simplificación algebraica</p>
+    <p class="texto">Factorizamos el numerador:</p>
+    <p class="texto examples">\( 1 - x^4 = (1 + x^2)(1 - x^2) \)</p>
+    <p class="texto">Reescribimos la integral:</p>
+    <p class="texto examples">\( \int \frac{(1 + x^2)(1 - x^2)}{1 + x^2} \, dx = \int (1 - x^2) \, dx \)</p>
+    <p class="texto">2. Integración término a término</p>
+    <p class="texto examples">\( \int 1 \, dx - \int x^2 \, dx \)</p>
+    <p class="texto examples">\( = x - \frac{x^3}{3} + C \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( x - \frac{x^3}{3} + C \)</p>
+</div>
+
+<div id="resolucion-i10">
+    <p class="texto examples">\( \int \frac{6x^3}{x-1} \, dx \)</p>
+    <p class="texto">1. Dividimos \( 6x^3 / (x-1) \)</p>
+    <p class="texto examples">\( \frac{6x^3}{x-1} = 6x^2 + 6x + 6 + \frac{6}{x-1} \)</p>
+    <p class="texto">2. Integración término a término</p>
+    <p class="texto examples">\( \int (6x^2 + 6x + 6 + \frac{6}{x-1}) \, dx \)</p>
+    <p class="texto examples">\( = 2x^3 + 3x^2 + 6x + 6 \ln{|x-1|} + C \)</p>
+</div>
+
+<div id="resolucion-i11">
+    <p class="texto examples">\( \int e^x 3^x \, dx \)</p>
+    <p class="texto">1. Combinar las funciones exponenciales</p>
+    <p class="texto">Reescribimos el integrando usando propiedades de exponentes:</p>
+    <p class="texto examples">\( e^x 3^x = (e \cdot 3)^x = (3e)^x \)</p>
+    <p class="texto">2. Aplicar la fórmula para integral de funciones exponenciales</p>
+    <p class="texto examples">\( \int a^x \, dx = \frac{a^x}{\ln{a}} + C \)</p>
+    <p class="texto">Aplicamos esta fórmula con \( a = 3e \):</p>
+    <p class="texto examples">\( \int (3e)^x \, dx = \frac{(3e)^x}{\ln{(3e)}} + C \)</p>
+    <p class="texto">3. Simplificamos el denominador</p>
+    <p class="texto">Descomponemos el logaritmo:</p>
+    <p class="texto examples">\( \ln{(3e)} = \ln{3} + \ln{e} = \ln{3} + 1 \)</p>
+    <p class="texto">Por lo tanto:</p>
+    <p class="texto examples">\( \frac{(3e)^x}{\ln{(3e)}} = \frac{(3e)^x}{\ln{3} + 1} \)</p>
+    <p class="texto">4. Revertir a la forma original</p>
+    <p class="texto">Volvemos a expresar \( (3e)^x \) como \( e^x 3^x \):</p>
+    <p class="texto examples">\( \frac{(3e)^x}{\ln{3} + 1} + C = \frac{e^x 3^x}{\ln{3} + 1} + C \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( \frac{e^x 3^x}{\ln{3} + 1} + C \)</p>
+</div>
+
+<div id="resolucion-i12">
+    <p class="texto examples">\( \int \sqrt{ax} \, dx \)</p>
+    <p class="texto">1. Identificamos \( a \) como constante y reescribimos la expresión</p>
+    <p class="texto examples">\( \int \sqrt{a}\sqrt{x} \, dx \)</p>
+    <p class="texto examples">\( \sqrt{a} \int \sqrt{x} \, dx \)</p>
+    <p class="texto">2. Reescribimos \( \sqrt{x} \) como \( x^{1/2} \)</p>
+    <p class="testo examples">\( \sqrt{a} \int x^{1/2} \, dx \)</p>
+    <p class="texto">3. Resolvemos la integral por la regla de la potencia</p>
+    <p class="texto examples">\( \sqrt{a} \frac{x^{1/2 + 1}}{1/2 + 1} + C\)</p>
+    <p class="texto examples">\( \sqrt{a} \frac{2x^{3/2}}{3} = \sqrt{a} \frac{2}{3} \sqrt{x^3} + C\)</p>
+    <p class="texto">4. Reordenamos la solución</p>
+    <p class="texto examples">\( \frac{2}{3} \sqrt{ax^3} + C \)</p>
+</div>
+
+<div id="resolucion-i13">
+    <p class="texto examples">\( \int x^{(1-n)/n} \, dx \)</p>
+    <p class="texto">1. Aplicar regla de potencia</p>
+    <p class="texto examples">\( \int x^m \, dx = \frac{x^{m+1}}{m+1} + C \) donde \( m = \frac{1-n}{n} \)</p>
+    <p class="texto">2. Sumar 1 al exponente</p>
+    <p class="texto examples">\( m + 1 = \frac{1-n}{n} + 1 = \frac{1}{n} \)</p>
+    <p class="texto">3. Integrar</p>
+    <p class="texto examples">\( \frac{x^{1/n}}{1/n} + C = n x^{1/n} + C \)</p>
+    <p class="texto">4. Forma alternativa</p>
+    <p class="texto examples">\( n \sqrt[n]{x} + C \)</p>
+</div>

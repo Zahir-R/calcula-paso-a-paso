@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+
+<div id="resolucion-d1">
+    <p class="texto examples">\( f(x) = 3^x + x^3 + 3x + 3 \)</p>
+    <p class="texto">Derivamos término por término:</p>
+    <p class="texto examples">\( (3^x)' = 3^x \ln(3) \)</p>
+    <p class="texto examples">\( (x^3)' = 3x^2 \)</p>
+    <p class="texto examples">\( (3x)' = 3 \)</p>
+    <p class="texto examples">\( (3)' = 0 \)</p>
+    <p class="texto">Por lo tanto, la derivada de \( f(x) \) es:</p>
+    <p class="texto examples">\( f'(x) = 3^x \ln(3) + 3x^2 + 3 \)</p>
+</div>
+
+<div id="resolucion-d2">
+    <p class="texto examples">\( f(x) = 5\cos(x) + x\cos(5) \)</p>
+    <p class="texto">La función tiene dos términos: \( 5\cos(x) \) y \( x\cos(5) \).</p>
+    <p class="texto">Derivamos cada término por separado:</p>
+    <ul>
+        <li class="texto examples">\( (5\cos(x))' = 5 \cdot (-\sin(x)) = -5\sin(x) \)</li>
+        <li class="texto examples">\( (x\cos(5))' = \cos(5) \cdot x' = \cos(5) \cdot 1 = \cos(5) \)</li>
+    </ul>
+    <p class="texto">Por lo tanto, la derivada de \( f(x) \) es:</p>
+    <p class="texto examples">\( f'(x) = -5\sin(x) + \cos(5) \)</p>
+</div>
+
+<div id="resolucion-d3">
+    <p class="texto examples">\( f(x) = \sqrt{x} + \frac{1}{\sqrt{x}} \)</p>
+    <p class="texto">1. Reescribimos con potencias: \( f(x) = x^{1/2} + x^{-1/2} \)</p>
+    <p class="texto">2. Aplicamos la regla de la potencia: \( \frac{d}{dx}x^n = nx^{n-1} \)</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{2}x^{-1/2} - \frac{1}{2}x^{-3/2} \)</p>
+    <p class="texto">3. Reescribimos con radicales:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{2\sqrt{x}} - \frac{1}{2x\sqrt{x}} \)</p>
+    <p class="texto">Como \( x \sqrt x = x \cdot x^{\frac{1}{2}}  = x^{\frac{3}{2}}\), podemos escribir como:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{2\sqrt{x}} - \frac{1}{2\sqrt{x^3}} \)</p>
+</div>
+
+<div id="resolucion-d4">
+    <p class="texto examples">\( f(x) = \sin{(x^4 + 1)} \)</p>
+    <p class="texto">1. Aplicamos la regla de la cadena: si \( f(x) = \sin(u) \), entonces \( f'(x) = \cos(u) \cdot u' \)</p>
+    <p class="texto">En este caso, \( u = x^4 + 1 \), por lo tanto:</p>
+    <p class="texto examples">\( f'(x) = \cos(x^4 + 1) \cdot (x^4 + 1)' \)</p>
+    <p class="texto examples">\( f'(x) = \cos(x^4 + 1) \cdot 4x^3 \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( f'(x) = 4x^3 \cos(x^4 + 1) \)</p>
+</div>
+
+<div id="resolucion-d5">
+    <p class="texto examples">\( f(x) = \sqrt[3]{1 + x^5} \)</p>
+    <p class="texto">1. Reescribimos la raíz cúbica como una potencia fraccionaria:</p>
+    <p class="texto examples">\( f(x) = (1 + x^5)^{1/3} \)</p>
+    <p class="texto">2. Aplicamos la regla de la cadena: si \( f(x) = (u(x))^n \), entonces \( f'(x) = n(u(x))^{n-1} \cdot u'(x) \)</p>
+    <p class="texto">Aquí, \( u(x) = 1 + x^5 \) y \( n = \frac{1}{3} \)</p>
+    <p class="texto">Entonces derivamos:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{3}(1 + x^5)^{-2/3} \cdot 5x^4 \)</p>
+    <p class="texto">3. Simplificamos el resultado:</p>
+    <p class="texto examples">\( f'(x) = \frac{5x^4}{3(1 + x^5)^{2/3}} \)</p>
+    <p class="texto">4. Escribimos la potencia como raíz cúbica para presentar la respuesta final:</p>
+    <p class="texto examples">\( f'(x) = \frac{5x^4}{3 \sqrt[3]{(1 + x^5)^2}} \)</p>
+</div>
+
+<div id="resolucion-d6">
+    <p class="texto examples">\( f(x) = \sin{(1 + x^2 e^x)} \)</p>
+    <p class="texto">1. Esto es una función compuesta; es decir, tiene una función dentro de otra función (\(sin{(u(x))})\): \( u(x) = 1 + x^2 e^x \).</p>
+    <p class="texto">2. Aplicamos la regla de la cadena: si \( f(x) = \sin(u(x)) \), entonces \( f'(x) = \cos(u(x)) \cdot u'(x) \)</p>
+    <p class="texto">Derivamos ahora \( u(x) = 1 + x^2 e^x \).</p>
+    <p class="texto examples">\( u'(x) = (1)' + (x^2 e^x)' \)</p>
+    <p class="texto">3. La derivada de 1 es 0, y derivamos \( x^2 e^x \) usando la regla del producto:</p>
+    <p class="texto examples">\( (x^2 e^x)' = 2x e^x + x^2 e^x \)</p>
+    <p class="texto">Entonces:</p>
+    <p class="texto examples">\( u'(x) = 2x e^x + x^2 e^x \)</p>
+    <p class="texto">4. Finalmente, aplicamos la regla de la cadena:</p>
+    <p class="texto examples">\( f'(x) = \cos{(1 + x^2 e^x)} \cdot (2x e^x + x^2 e^x) \)</p>
+</div>
+
+<div id="resolucion-d7">
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+</div>
+
+<div id="resolucion-d8">
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+</div>
+
+<div id="resolucion-d9">
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+</div>
+
+<div id="resolucion-d10">
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+    <p class="texto examples"></p>
+</div>
