@@ -8,10 +8,10 @@ export async function inicializarApp() {
     const topicSelector = document.getElementById('topic');
     const startBtn = document.getElementById('startBtn');
 
-    let modo = modeSelector.value || "estudio";
-    let tema = topicSelector.value || "funciones";
+    let modo = modeSelector.value || "estudio";     // Pick user's input or estudio as default
+    let tema = topicSelector.value || "funciones";  // Pick user's input or funciones as default
 
-    topicSelector.disabled = (modo === 'simulacro');
+    topicSelector.disabled = (modo === 'simulacro');  // Disable the topic selector based on modo value
 
     modeSelector.addEventListener('change', () => {
         modo = modeSelector.value;
