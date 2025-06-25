@@ -30,6 +30,9 @@ try {
         modo = modeSelector.value;
         if (modo === 'estudio') mostrarTeoria(tema);
         else if (modo === 'practica') iniciarPractica(tema);
-        else if (modo === 'simulacro') iniciarSimulacro();
+        else if (modo === 'simulacro') {
+            topicSelector.disabled = true;
+            iniciarSimulacro();
+        }
     });
 }
