@@ -8,8 +8,10 @@ export async function inicializarApp() {
     const topicSelector = document.getElementById('topic');
     const startBtn = document.getElementById('startBtn');
 
-    let modo = "estudio";
-    let tema = "funciones";
+    let modo = modeSelector.value || "estudio";
+    let tema = topicSelector.value || "funciones";
+
+    topicSelector.disabled = (modo === 'simulacro');
 
     modeSelector.addEventListener('change', () => {
         modo = modeSelector.value;
@@ -30,9 +32,6 @@ try {
         modo = modeSelector.value;
         if (modo === 'estudio') mostrarTeoria(tema);
         else if (modo === 'practica') iniciarPractica(tema);
-        else if (modo === 'simulacro') {
-            topicSelector.disabled = true;
-            iniciarSimulacro();
-        }
+        else if (modo === 'simulacro') iniciarSimulacro();
     });
 }
