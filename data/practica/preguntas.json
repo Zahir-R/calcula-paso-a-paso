@@ -66,6 +66,50 @@
         "\\( \\frac{x^2 + 3x}{x^2 + 3x - 3} \\)"
       ],
       "respuesta": 1
+    },
+    {
+      "id": "f7",
+      "pregunta": "Hallar \\( f \\circ g \\circ h \\) si \\( f(x) = x^5 \\) ; \\( g(x) = 2x \\) y \\( h(x) = sin(x) \\)",
+      "opciones": [
+        "\\( sin(2x^5) \\)",
+        "\\( 32sin^5(x) \\)",
+        "\\( 32sin(x) \\)",
+        "\\( 2sin^5(x) \\)"
+      ],
+      "respuesta": 1
+    },
+    {
+      "id": "f8",
+      "pregunta": "Hallar \\( f \\circ g \\circ h \\) si \\( f(x) = \\sqrt{x} \\) ; \\( g(x) = x^2 + 1 \\) y \\( h(x) = cos(x) \\)",
+      "opciones": [
+        "\\( \\sqrt{cos^2(x) + 1} \\)",
+        "\\( cos(\\sqrt{x^2 + 1}) \\)",
+        "\\( \\sqrt{cos(x^2 + 1)} \\)",
+        "\\( cos^2(\\sqrt{x}) + 1 \\)"
+      ],
+      "respuesta": 0
+    },
+    {
+      "id": "f9",
+      "pregunta": "Hallar \\( f \\circ g \\circ h \\) si \\( f(x) = x^3 - 1 \\) ; \\( g(x) = 5x \\) y \\( h(x) = \\log_2{x} \\)",
+      "opciones": [
+        "\\( 125\\log_2^3{x} - 1\\)",
+        "\\( 5(\\log_2{(x^3 - 1)}) \\)",
+        "\\( 125 \\log_2{x} - 1 \\)",
+        "\\( \\log_2{(5x^3 - 1)} \\)"
+      ],
+      "respuesta": 0
+    },
+    {
+      "id": "f10",
+      "pregunta": "Hallar la función inversa de \\( f(x) = \\frac{2}{x^3 + 1} \\)",
+      "opciones": [
+        "\\( \\sqrt[3]{\\frac{x-2}{x}} \\)",
+        "\\( \\sqrt[3]{\\frac{2-x}{x}} \\)",
+        "\\( \\sqrt[3]{\\frac{2+x}{x}} \\)",
+        "\\( \\frac{1}{\\sqrt[3]{x-2}} \\)"
+      ],
+      "respuesta": 1
     }
     ],
     "limites": [

@@ -77,22 +77,63 @@
 </div>
 
 <div id="resolucion-f7">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
+    <p class="texto examples">\( f(x) = x^5 \), &nbsp;&nbsp; \( g(x) = 2x \), &nbsp;&nbsp; \( h(x) = \sin{x} \)</p>
+    <p class="texto">2. Primero aplicamos la función más interna \( h(x) \):</p>
+    <p class="texto examples">\( h(x) = \sin{x} \)</p>
+    <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
+    <p class="texto examples">\( g(h(x)) = g(\sin{x}) = 2 \cdot \sin{x} \)</p>
+    <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
+    <p class="texto examples">\( f(g(h(x))) = f(2\sin{x}) = (2\sin{x})^5 \)</p>
+    <p class="texto">5. Simplificamos la expresión:</p>
+    <p class="texto examples">\( (2\sin{x})^5 = 2^5 \cdot \sin^5{x} = 32\sin^5{x} \)</p>
+    <p class="texto">Por lo tanto, la composición final es:</p>
+    <p class="texto examples">\( f \circ g \circ h = 32\sin^5{x} \)</p>
 </div>
+
 <div id="resolucion-f8">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
+    <p class="texto examples">\( f(x) = \sqrt{x} \), &nbsp;&nbsp; \( g(x) = x^2 + 1 \), &nbsp;&nbsp; \( h(x) = \cos{x} \)</p>
+    <p class="texto">2. Primero aplicamos la función más interna \( h(x) \):</p>
+    <p class="texto examples">\( h(x) = \cos{x} \)</p>
+    <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
+    <p class="texto examples">\( g(h(x)) = g(\cos{x}) = (\cos{x})^2 + 1 = \cos^2{x} + 1 \)</p>
+    <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
+    <p class="texto examples">\( f(g(h(x))) = f(\cos^2{x} + 1) = \sqrt{\cos^2{x} + 1} \)</p>
+    <p class="texto">Por lo tanto, la composición final es:</p>
+    <p class="texto examples">\( f \circ g \circ h = \sqrt{\cos^2{x} + 1} \)</p>
 </div>
+
 <div id="resolucion-f9">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
+    <p class="texto examples">\( f(x) = x^3 - 1 \), &nbsp;&nbsp; \( g(x) = 5x \), &nbsp;&nbsp; \( h(x) = \log_2{x} \)</p>
+    <p class="texto">2. Comenzamos aplicando la función más interna \( h(x) \):</p>
+    <p class="texto examples">\( h(x) = \log_2{x} \)</p>
+    <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
+    <p class="texto examples">\( g(h(x)) = g(\log_2{x}) = 5 \cdot \log_2{x} \)</p>
+    <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
+    <p class="texto examples">\( f(g(h(x))) = f(5\log_2{x}) = (5\log_2{x})^3 - 1 \)</p>
+    <p class="texto">5. Desarrollamos la expresión:</p>
+    <p class="texto examples">\( = 125\log_2^3{x} - 1 \)</p>
+    <p class="texto">Por lo tanto, la composición final es:</p>
+    <p class="texto examples">\( f \circ g \circ h = 125\log_2^3{x} - 1 \)</p>
 </div>
+
 <div id="resolucion-f10">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Partimos de la función original:</p>
+    <p class="texto examples">\( f(x) = \frac{2}{x^3 + 1} \)</p>
+    <p class="texto">2. Para hallar la inversa \( f^{-1}(x) \), intercambiamos \( x \) e \( y \):</p>
+    <p class="texto examples">\( x = \frac{2}{y^3 + 1} \)</p>
+    <p class="texto">3. Multiplicamos ambos lados por \( (y^3 + 1) \):</p>
+    <p class="texto examples">\( x(y^3 + 1) = 2 \)</p>
+    <p class="texto">4. Dividimos ambos lados por \( x \):</p>
+    <p class="texto examples">\( y^3 + 1 = \frac{2}{x} \)</p>
+    <p class="texto">5. Restamos 1 a ambos lados:</p>
+    <p class="texto examples">\( y^3 = \frac{2}{x} - 1 \)</p>
+    <p class="texto">6. Simplificamos la expresión:</p>
+    <p class="texto examples">\( y^3 = \frac{2 - x}{x} \)</p>
+    <p class="texto">7. Tomamos la raíz cúbica de ambos lados:</p>
+    <p class="texto examples">\( y = \sqrt[3]{\frac{2 - x}{x}} \)</p>
+    <p class="texto">Por lo tanto, la función inversa es:</p>
+    <p class="texto examples">\( f^{-1}(x) = \sqrt[3]{\frac{2 - x}{x}} \)</p>
 </div>
