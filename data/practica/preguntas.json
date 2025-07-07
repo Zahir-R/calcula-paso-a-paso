@@ -211,6 +211,127 @@
           "\\( \\frac{2}{5} \\)"
         ],
         "respuesta": 1
+      },
+      {
+        "id": "l5",
+        "pregunta": "Hallar \\( \\lim_{x \\to 5} \\frac{\\sqrt{2x - 1} - \\sqrt{x + 4}} {x^2 - 6x + 5}\\)",
+        "opciones": [
+          "\\( \\frac{1}{24} \\)",
+          "\\( \\frac{1}{12} \\)",
+          "\\( \\frac{1}{8} \\)",
+          "\\( \\frac{1}{32} \\)"
+        ],
+        "respuesta": 0
+      },
+      {
+        "id": "l6",
+        "pregunta": "Calcular \\( \\lim_{x \\to \\infty} x^{3/2} \\left( \\sqrt{x + 2} - 2\\sqrt{x + 1} + \\sqrt{x} \\right) \\)",
+        "opciones": [
+          "\\( -\\dfrac{1}{4} \\)",
+          "\\( 0 \\)",
+          "\\( -\\dfrac{1}{2} \\)",
+          "\\( \\infty \\)"
+        ],
+        "respuesta": 0
+      },
+      {
+        "id": "l7",
+        "pregunta": "Calcular \\( \\lim_{x \\to 4} \\frac{4-x}{2-\\sqrt{x}} \\)",
+        "opciones": [
+          "\\( 6 \\)",
+          "\\( 0 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "respuesta": 3
+      },
+      {
+        "id": "l8",
+        "pregunta": "Calcular \\( \\lim_{x \\to 9} \\frac{\\sqrt{x} - 3}{x - 9} \\)",
+        "opciones": [
+          "\\( 0 \\)",
+          "\\( 1 \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{5}{12} \\)"
+        ],
+        "respuesta": 2
+      },
+      {
+        "id": "l9",
+        "pregunta": "Calcular \\( \\lim_{x \\to 3} \\frac{5 - \\sqrt{x^3 - 2}}{1 - \\sqrt{x^2 -8}} \\)",
+        "opciones": [
+          "\\( \\frac{9}{10} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{5}{3} \\)",
+          "\\( \\frac{1}{5} \\)"
+        ],
+        "respuesta": 0
+      },
+      {
+        "id": "l10",
+        "pregunta": "Calcular \\( \\lim_{x \\to 1} \\frac{\\sqrt[5]{x} - 1 }{x - 1} \\)",
+        "opciones": [
+          "\\( 1 \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{1}{5} \\)"
+        ],
+        "respuesta": 3
+      },
+      {
+        "id": "l11",
+        "pregunta": "Calcular \\( \\lim_{x \\to \\infty} \\frac{6x + 1}{2x - 1} \\)",
+        "opciones": [
+          "\\( 0 \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( 3 \\)",
+          "\\( \\infty \\)"
+        ],
+        "respuesta": 2
+      },
+      {
+        "id": "l12",
+        "pregunta": "Calcular \\( \\lim_{x \\to \\infty} \\frac{\\sqrt{x^2 - 1}}{x - 1} \\)",
+        "opciones": [
+          "\\( 0 \\)",
+          "\\( 1 \\)",
+          "\\( \\infty \\)",
+          "\\( -2 \\)"
+        ],
+        "respuesta": 1 
+      },
+      {
+        "id": "l13",
+        "pregunta": "Calcular \\( \\lim_{x \\to \\infty} \\frac{(x + 1)^m x^n}{x^m (x^n - 1)} \\)",
+        "opciones": [
+          "\\( 1 \\)",
+          "\\( 0 \\)",
+          "\\( \\infty \\)",
+          "Indeterminado"
+        ],
+        "respuesta": 0 
+      },
+      {
+        "id": "l14",
+        "pregunta": "Calcular \\( \\lim_{x \\to 1} (\\frac{1}{x - 1} - \\frac{2}{x^2 - 1}) \\)",
+        "opciones": [
+          "\\( \\infty \\)",
+          "\\( -1 \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( 0 \\)"
+        ],
+        "respuesta": 2 
+      },
+      {
+        "id": "l15",
+        "pregunta": "Calcular \\( \\lim_{x \\to \\infty} (x - \\frac{x^2}{x + 1}) \\)",
+        "opciones": [
+          "\\( 0 \\)",
+          "\\( \\infty \\)",
+          "\\( 1 \\)",
+          "\\( -\\infty \\)"
+        ],
+        "respuesta": 2 
       }
     ],
     "derivadas": [
