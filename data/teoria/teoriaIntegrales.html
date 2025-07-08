@@ -5,123 +5,225 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Teoría: Integrales</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
 </head>
 
-<h2>Integrales</h2>
-<p class="texto">
-    La integral de una función es una operación matemática que representa el área bajo la curva de la función en un intervalo dado. Es el proceso inverso de la derivación y tiene aplicaciones en áreas como la física, economía, y geometría.
-</p>
-
-<p class="texto">
-    Existen dos tipos principales de integrales: las <strong>integrales definidas</strong> y las <strong>indefinidas</strong>. Las integrales definidas tienen un intervalo específico de integración, mientras que las integrales indefinidas no tienen límites y representan una familia de funciones.
-</p>
-
-<p class="texto">
-    <strong>Definición formal (Integral definida)</strong>
-</p>
-
-<p class="texto">
-    La integral definida de una función \( f(x) \) en el intervalo \( [a, b] \), denotada como \( \int_a^b f(x) \, dx \), se define como:
-    <p class="examples texto">
-        \( \int_a^b f(x) \, dx = F(b) - F(a) \)
+<body>
+    <h2>Integrales</h2>
+    <p class="texto">
+        La integral de una función es una operación matemática que representa el área bajo la curva de la función en un intervalo dado. Es el proceso inverso de la derivación y tiene aplicaciones en áreas como la física, economía, y geometría.
     </p>
-    donde \( F(x) \) es la antiderivada de \( f(x) \), es decir, \( F'(x) = f(x) \).
-</p>
 
-<h3>Ejemplos Básicos</h3>
-<ul>
-    <li class="texto">
-        <strong>Integral de una constante:</strong>
-        <p class="examples texto">
-            Si \( f(x) = c \) (donde \( c \) es una constante), entonces \( \int_a^b c \, dx = c(b - a) \).
-        </p>
-        <i>Explicación:</i> El área bajo una constante es simplemente la base por la altura.
-    </li>
-    <li class="texto">
-        <strong>Integral de una potencia:</strong>
-        <p class="examples texto">
-            Si \( f(x) = x^n \), entonces \( \int_a^b x^n \, dx = \frac{x^{n+1}}{n+1} \Big|_a^b \).
-        </p>
-        <i>Explicación:</i> Aplicando la regla de las potencias para integrales.
-        <p class="examples texto">
-            Si \( f(x) = e^x \), entonces \( \int_a^b e^x \, dx = e^x \Big|_a^b \).
-        </p>
-        <i>Explicación:</i> La integral de \( e^x \) es \( e^x \) mismo, como su derivada.
-    </li>
-    <li class="texto">
-        <strong>Integral de una suma:</strong>
-        <p class="examples texto">
-            Si \( f(x) = g(x) + h(x) \), entonces \( \int_a^b f(x) \, dx = \int_a^b g(x) \, dx + \int_a^b h(x) \, dx \).
-        </p>
-        <i>Explicación:</i> La integral de una suma es la suma de las integrales.
-    </li>
-</ul>
-
-<h3>Integral Indefinida</h3>
-<p class="texto">
-    Una integral indefinida de una función \( f(x) \) es una antiderivada general, que no tiene límites de integración. Se denota como \( \int f(x) \, dx \) y su resultado es una familia de funciones que incluyen una constante de integración \( C \).
-</p>
-<p class="texto">
-    Formalmente, la integral indefinida de una función \( f(x) \) es:
-    <p class="examples texto">
-        \( \int f(x) \, dx = F(x) + C \)
+    <p class="texto">
+        Existen dos tipos principales de integrales: las <strong>integrales definidas</strong> y las <strong>indefinidas</strong>. Las integrales definidas tienen un intervalo específico de integración, mientras que las integrales indefinidas no tienen límites y representan una familia de funciones.
     </p>
-    donde \( F'(x) = f(x) \) y \( C \) es una constante arbitraria.
-</p>
 
-<h3>Ejemplos Básicos</h3>
-<ul>
-    <li class="texto">
-        <strong>Integral indefinida de una constante:</strong>
-        <p class="examples texto">
-            Si \( f(x) = c \) (donde \( c \) es una constante), entonces \( \int c \, dx = c \cdot x + C \).
-        </p>
-        <i>Explicación:</i> La integral de una constante es simplemente la constante multiplicada por \( x \), con una constante de integración \( C \).
-    </li>
-    <li class="texto">
-        <strong>Integral indefinida de una potencia:</strong>
-        <p class="examples texto">
-            Si \( f(x) = x^n \), entonces \( \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \) (para \( n \neq -1 \)).
-        </p>
-        <i>Explicación:</i> Aplicando la regla de las potencias para integrales indefinidas.
-        <p class="examples texto">
-            Si \( f(x) = e^x \), entonces \( \int e^x \, dx = e^x + C \).
-        </p>
-        <i>Explicación:</i> La integral de \( e^x \) es \( e^x \) más la constante de integración \( C \).
-    </li>
-    <li class="texto">
-        <strong>Integral indefinida de una suma:</strong>
-        <p class="examples texto">
-            Si \( f(x) = g(x) + h(x) \), entonces \( \int f(x) \, dx = \int g(x) \, dx + \int h(x) \, dx + C \).
-        </p>
-        <i>Explicación:</i> La integral indefinida de una suma es la suma de las integrales indefinidas de cada función.
-    </li>
-</ul>
+    <p class="texto">
+        <strong>Definición formal (Integral definida)</strong>
+    </p>
 
-<h3>Reglas de Integración (Principales)</h3>
-<ul>
-    <li class="texto">
-        <strong>Regla de la potencia (Indefinida):</strong>
+    <p class="texto">
+        La integral definida de una función \( f(x) \) en el intervalo \( [a, b] \), denotada como \( \int_a^b f(x) \, dx \), se define como:
         <p class="examples texto">
-            \( \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \) (para \( n \neq -1 \))<br><br>
-            <i>Ejemplo:</i> \( \int x^2 \, dx = \frac{x^3}{3} + C \)
+            \( \int_a^b f(x) \, dx = F(b) - F(a) \)
         </p>
-    </li>
-    <li class="texto">
-        <strong>Regla de la suma:</strong>
-        <p class="examples texto">
-            \( \int (f(x) + g(x)) \, dx = \int f(x) \, dx + \int g(x) \, dx + C \)<br><br>
-            <i>Ejemplo:</i> \( \int (x^2 + x) \, dx = \frac{x^3}{3} + \frac{x^2}{2} + C \)
-        </p>
-    </li>
-    <li class="texto">
-        <strong>Integral de un producto constante:</strong>
-        <p class="examples texto">
-            \( \int c \cdot f(x) \, dx = c \cdot \int f(x) \, dx + C \)<br><br>
-            <i>Ejemplo:</i> \( \int 3x^2 \, dx = 3 \cdot \frac{x^3}{3} + C = x^3 + C \)
-        </p>
-    </li>
-</ul>
+        donde \( F(x) \) es la antiderivada de \( f(x) \), es decir, \( F'(x) = f(x) \).
+    </p>
 
+    <h3>Ejemplos Básicos</h3>
+    <ul>
+        <li class="texto">
+            <strong>Integral de una constante:</strong>
+            <p class="examples texto">
+                Si \( f(x) = c \) (donde \( c \) es una constante), entonces \( \int_a^b c \, dx = c(b - a) \).
+            </p>
+            <i>Explicación:</i> El área bajo una constante es simplemente la base por la altura.
+        </li>
+        <li class="texto">
+            <strong>Integral de una potencia:</strong>
+            <p class="examples texto">
+                Si \( f(x) = x^n \), entonces \( \int_a^b x^n \, dx = \frac{x^{n+1}}{n+1} \Big|_a^b \).
+            </p>
+            <i>Explicación:</i> Aplicando la regla de las potencias para integrales.
+            <p class="examples texto">
+                Si \( f(x) = e^x \), entonces \( \int_a^b e^x \, dx = e^x \Big|_a^b \).
+            </p>
+            <i>Explicación:</i> La integral de \( e^x \) es \( e^x \) mismo, como su derivada.
+        </li>
+        <li class="texto">
+            <strong>Integral de una suma:</strong>
+            <p class="examples texto">
+                Si \( f(x) = g(x) + h(x) \), entonces \( \int_a^b f(x) \, dx = \int_a^b g(x) \, dx + \int_a^b h(x) \, dx \).
+            </p>
+            <i>Explicación:</i> La integral de una suma es la suma de las integrales.
+        </li>
+    </ul>
+
+    <h3>Integral Indefinida</h3>
+    <p class="texto">
+        Una integral indefinida de una función \( f(x) \) es una antiderivada general, que no tiene límites de integración. Se denota como \( \int f(x) \, dx \) y su resultado es una familia de funciones que incluyen una constante de integración \( C \).
+    </p>
+    <p class="texto">
+        Formalmente, la integral indefinida de una función \( f(x) \) es:
+        <p class="examples texto">
+            \( \int f(x) \, dx = F(x) + C \)
+        </p>
+        donde \( F'(x) = f(x) \) y \( C \) es una constante arbitraria.
+    </p>
+
+    <h3>Teoría Complementaria</h3>
+    <ul>
+        <li class="texto">
+            <strong>Distribución de la integral:</strong>
+            <p class="examples texto">
+                \( \int (af(x) + bg(x)) \, dx = a \int f(x) \, dx + b \int g(x) \, dx \)
+            </p>
+            <i>Explicación:</i> La integral es lineal, se puede distribuir sobre sumas y constantes.
+        </li>
+        <li class="texto">
+            <strong>Integral de una exponencial:</strong>
+            <p class="examples texto">
+                \( \int a^x \, dx = \frac{a^x}{\ln a} + C \), donde \( a > 0, a \ne 1 \)
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Integral de \( \frac{1}{x} \):</strong>
+            <p class="examples texto">
+                \( \int \frac{1}{x} \, dx = \ln|x| + C \)
+            </p>
+            <i>Explicación:</i> Es un caso especial fuera de la regla de potencias.
+        </li>
+        <li class="texto">
+            <strong>Cambio de variable (sustitución):</strong>
+            <p class="examples texto">
+                Si \( u = g(x) \), entonces \( \int f(g(x))g'(x) \, dx = \int f(u) \, du \)
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Integración por partes:</strong>
+            <p class="examples texto">
+                \( \int u \, dv = uv - \int v \, du \)
+            </p>
+            <i>Explicación:</i> Útil para productos de funciones como \( x \cdot e^x \) o \( x \cdot \ln x \).
+        </li>
+        <li class="texto">
+            <strong>División algebraica previa:</strong>
+            <p class="examples texto">
+                \( \int \frac{6x^3}{x - 1} dx \) se puede resolver dividiendo primero los polinomios.
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Factorización antes de integrar:</strong>
+            <p class="examples texto">
+                \( \int \frac{1 - x^4}{1 + x^2} dx \rightarrow \int (1 - x^2) dx \)
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Exponentes fraccionarios:</strong>
+            <p class="examples texto">
+                \( \sqrt[n]{x} = x^{1/n} \Rightarrow \int \sqrt[3]{x} dx = \int x^{1/3} dx = \frac{x^{4/3}}{4/3} + C \)
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Propiedades logarítmicas útiles en integración:</strong>
+            <p class="examples texto">
+                \( \ln(ab) = \ln a + \ln b \), \( \ln \left(\frac{a}{b}\right) = \ln a - \ln b \), \( \ln(a^n) = n \ln a \)
+            </p>
+        </li>
+    </ul>
+
+    <h3>Ejemplos Básicos</h3>
+    <ul>
+        <li class="texto">
+            <strong>Integral indefinida de una constante:</strong>
+            <p class="examples texto">
+                Si \( f(x) = c \) (donde \( c \) es una constante), entonces \( \int c \, dx = c \cdot x + C \).
+            </p>
+            <i>Explicación:</i> La integral de una constante es simplemente la constante multiplicada por \( x \), con una constante de integración \( C \).
+        </li>
+        <li class="texto">
+            <strong>Integral indefinida de una potencia:</strong>
+            <p class="examples texto">
+                Si \( f(x) = x^n \), entonces \( \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \) (para \( n \neq -1 \)).
+            </p>
+            <i>Explicación:</i> Aplicando la regla de las potencias para integrales indefinidas.
+            <p class="examples texto">
+                Si \( f(x) = e^x \), entonces \( \int e^x \, dx = e^x + C \).
+            </p>
+            <i>Explicación:</i> La integral de \( e^x \) es \( e^x \) más la constante de integración \( C \).
+        </li>
+        <li class="texto">
+            <strong>Integral indefinida de una suma:</strong>
+            <p class="examples texto">
+                Si \( f(x) = g(x) + h(x) \), entonces \( \int f(x) \, dx = \int g(x) \, dx + \int h(x) \, dx + C \).
+            </p>
+            <i>Explicación:</i> La integral indefinida de una suma es la suma de las integrales indefinidas de cada función.
+        </li>
+    </ul>
+
+    <h3>Reglas de Integración (Principales)</h3>
+    <ul>
+        <li class="texto">
+            <strong>Regla de la potencia:</strong>
+            <p class="examples texto">
+                \( \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \) (para \( n \neq -1 \))<br><br>
+                <i>Ejemplo:</i> \( \int x^2 \, dx = \frac{x^3}{3} + C \)
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Regla de la suma:</strong>
+            <p class="examples texto">
+                \( \int (f(x) + g(x)) \, dx = \int f(x) \, dx + \int g(x) \, dx + C \)<br><br>
+                <i>Ejemplo:</i> \( \int (x^2 + x) \, dx = \frac{x^3}{3} + \frac{x^2}{2} + C \)
+            </p>
+        </li>
+        <li class="texto">
+            <strong>Integral de un producto constante:</strong>
+            <p class="examples texto">
+                \( \int c \cdot f(x) \, dx = c \cdot \int f(x) \, dx + C \)<br><br>
+                <i>Ejemplo:</i> \( \int 3x^2 \, dx = 3 \cdot \frac{x^3}{3} + C = x^3 + C \)
+            </p>
+        </li>
+    </ul>
+
+    <h3>Pasos para Resolver una Integral</h3>
+    <ol>
+        <li class="texto">Identificar el tipo de función: constante, potencia, exponencial, suma, etc.</li>
+        <li class="texto">Aplicar la regla de integración correspondiente.</li>
+        <li class="texto">Si es una integral definida, evaluar el resultado entre los límites \( a \) y \( b \): \( F(b) - F(a) \).</li>
+        <li class="texto">Si es una integral indefinida, añadir la constante de integración \( C \).</li>
+    </ol>
+
+    <h3>Comprobación por Derivación</h3>
+    <p class="examples texto">
+        Si \( \int x^3 \, dx = \frac{x^4}{4} + C \), entonces:<br>
+        \( \frac{d}{dx} \left( \frac{x^4}{4} + C \right) = x^3 \)
+    </p>
+    <p class="texto">
+        Esto confirma que la integración fue correcta.
+    </p>
+
+    <h3>Evaluación en Límites (Integrales Definidas)</h3>
+    <p class="examples texto">
+        \( \int_1^3 x^2 \, dx = \left. \frac{x^3}{3} \right|_1^3 = \frac{27}{3} - \frac{1}{3} = \frac{26}{3} \)
+    </p>
+
+    <h3>Casos Frecuentes</h3>
+    <ul>
+        <li class="texto">
+            <strong>Integral de \( x^{-1} \):</strong>
+            <p class="examples texto">
+                \( \int \frac{1}{x} \, dx = \ln|x| + C \)
+            </p>
+            <i>Explicación:</i> Este caso no sigue la regla de potencias común y debe recordarse aparte.
+        </li>
+        <li class="texto">
+            <strong>Integrales con factorización previa:</strong>
+            <p class="examples texto">
+                \( \int (2x + 4) \, dx = \int 2x \, dx + \int 4 \, dx = x^2 + 4x + C \)
+            </p>
+            <i>Explicación:</i> Se puede separar en integrales individuales si hay suma o resta.
+        </li>
+    </ul>
+</body>
 </html>

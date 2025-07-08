@@ -5,100 +5,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Teoría: Derivadas</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
 </head>
 
-<h2>Derivadas</h2>
-<p class="texto">
-    La derivada de una función representa la tasa de cambio instantánea de dicha función con respecto a su variable independiente. En términos geométricos, es la pendiente de la recta tangente a la curva de la función en un punto dado.
-</p>
+<body>
+    <h2>Derivadas</h2>
+    <p class="texto">
+        La derivada de una función representa la tasa de cambio instantánea de dicha función con respecto a su variable independiente. En términos geométricos, es la pendiente de la recta tangente a la curva de la función en un punto dado.
+    </p>
 
-<h3>Definición formal (límite de la tasa de cambio)</h3>
-<p class="texto">
-    La derivada de \( f(x) \) en el punto \( x = a \), denotada como \( f'(a) \) o \( \frac{df}{dx}(a) \), se define como:
-</p>
-<p class="examples texto">
-    \( f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \)
-</p>
-<p class="texto">
-    Si este límite existe, la función es derivable en \( x = a \).
-</p>
+    <h3>Definición formal (límite de la tasa de cambio)</h3>
+    <p class="texto">
+        La derivada de \( f(x) \) en el punto \( x = a \), denotada como \( f'(a) \) o \( \frac{df}{dx}(a) \), se define como:
+    </p>
+    <p class="examples texto">
+        \( f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \)
+    </p>
+    <p class="texto">
+        Si este límite existe, la función es derivable en \( x = a \).
+    </p>
 
-<h3>Reglas Básicas</h3>
-<ul>
-    <li class="texto">
-        <strong>Constante:</strong>
-        <p class="examples texto">\( \frac{d}{dx} c = 0 \)</p>
-        <i>La pendiente de una función constante es cero.</i>
-    </li>
-    <li class="texto">
-        <strong>Potencia:</strong>
-        <p class="examples texto">\( \frac{d}{dx} x^n = nx^{n - 1} \)</p>
-        <i>Aplica también para exponentes fraccionarios y negativos.</i>
-    </li>
-    <li class="texto">
-        <strong>Suma o resta:</strong>
-        <p class="examples texto">\( \frac{d}{dx}[f(x) \pm g(x)] = f'(x) \pm g'(x) \)</p>
-    </li>
-    <li class="texto">
-        <strong>Constante por función:</strong>
-        <p class="examples texto">\( \frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x) \)</p>
-    </li>
-</ul>
+    <h3>Reglas Básicas</h3>
+    <ul>
+        <li class="texto">
+            <strong>Constante:</strong>
+            <p class="examples texto">\( \frac{d}{dx} c = 0 \)</p>
+            <i>La pendiente de una función constante es cero.</i>
+        </li>
+        <li class="texto">
+            <strong>Potencia:</strong>
+            <p class="examples texto">\( \frac{d}{dx} x^n = nx^{n - 1} \)</p>
+            <i>Aplica también para exponentes fraccionarios y negativos.</i>
+        </li>
+        <li class="texto">
+            <strong>Suma o resta:</strong>
+            <p class="examples texto">\( \frac{d}{dx}[f(x) \pm g(x)] = f'(x) \pm g'(x) \)</p>
+        </li>
+        <li class="texto">
+            <strong>Constante por función:</strong>
+            <p class="examples texto">\( \frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x) \)</p>
+        </li>
+    </ul>
 
-<h3>Reglas de Derivación (Principales)</h3>
-<ul>
-    <li class="texto">
-        <strong>Producto:</strong>
-        <p class="examples texto">\( \frac{d}{dx}[u \cdot v] = u'v + uv' \)</p>
-        <i>Ejemplo:</i>  
-        \( \frac{d}{dx}[x \cdot \sin(x)] = 1 \cdot \sin(x) + x \cdot \cos(x) \)
-    </li>
-    <li class="texto">
-        <strong>Cociente:</strong>
-        <p class="examples texto">\( \frac{d}{dx} \left( \frac{u}{v} \right) = \frac{u'v - uv'}{v^2} \)</p>
-    </li>
-    <li class="texto">
-        <strong>Cadena:</strong>
-        <p class="examples texto">\( \frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x) \)</p>
-        <i>Ejemplo:</i>  
-        \( \frac{d}{dx} \sin(x^2) = \cos(x^2) \cdot 2x \)
-    </li>
-</ul>
+    <h3>Reglas de Derivación (Principales)</h3>
+    <ul>
+        <li class="texto">
+            <strong>Producto:</strong>
+            <p class="examples texto">\( \frac{d}{dx}[u \cdot v] = u'v + uv' \)</p>
+            <i>Ejemplo:</i>  
+            \( \frac{d}{dx}[x \cdot \sin(x)] = 1 \cdot \sin(x) + x \cdot \cos(x) \)
+        </li>
+        <li class="texto">
+            <strong>Cociente:</strong>
+            <p class="examples texto">\( \frac{d}{dx} \left( \frac{u}{v} \right) = \frac{u'v - uv'}{v^2} \)</p>
+        </li>
+        <li class="texto">
+            <strong>Cadena:</strong>
+            <p class="examples texto">\( \frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x) \)</p>
+            <i>Ejemplo:</i>  
+            \( \frac{d}{dx} \sin(x^2) = \cos(x^2) \cdot 2x \)
+        </li>
+    </ul>
 
-<h3>Funciones Comunes</h3>
-<ul>
-    <li class="texto">
-        <strong>Exponencial base e:</strong>  
-        <p class="examples texto">\( \frac{d}{dx} e^x = e^x \)</p>
-    </li>
-    <li class="texto">
-        <strong>Exponencial base a:</strong>  
-        <p class="examples texto">\( \frac{d}{dx} a^x = a^x \ln(a) \)</p>
-        <i>Se usa cuando la base no es \( e \), como \( 2^x, 3^x, etc. \)</i>
-    </li>
-    <li class="texto">
-        <strong>Logaritmo natural:</strong>  
-        <p class="examples texto">\( \frac{d}{dx} \ln(x) = \frac{1}{x} \)</p>
-        <p class="examples texto">\( \frac{d}{dx} \ln(u(x)) = \frac{1}{u(x)} \cdot u'(x) \)</p>
-    </li>
-    <li class="texto">
-        <strong>Funciones trigonométricas:</strong>
-        <p class="examples texto">
-            \( \frac{d}{dx} \sin(x) = \cos(x) \)<br>
-            \( \frac{d}{dx} \cos(x) = -\sin(x) \)<br>
-            \( \frac{d}{dx} \tan(x) = \sec^2(x) \)<br>
-            \( \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}} \)
-        </p>
-    </li>
-</ul>
+    <h3>Funciones Comunes</h3>
+    <ul>
+        <li class="texto">
+            <strong>Exponencial base e:</strong>  
+            <p class="examples texto">\( \frac{d}{dx} e^x = e^x \)</p>
+        </li>
+        <li class="texto">
+            <strong>Exponencial base a:</strong>  
+            <p class="examples texto">\( \frac{d}{dx} a^x = a^x \ln(a) \)</p>
+            <i>Se usa cuando la base no es \( e \), como \( 2^x, 3^x, etc. \)</i>
+        </li>
+        <li class="texto">
+            <strong>Logaritmo natural:</strong>  
+            <p class="examples texto">\( \frac{d}{dx} \ln(x) = \frac{1}{x} \)</p>
+            <p class="examples texto">\( \frac{d}{dx} \ln(u(x)) = \frac{1}{u(x)} \cdot u'(x) \)</p>
+        </li>
+        <li class="texto">
+            <strong>Funciones trigonométricas:</strong>
+            <p class="examples texto">
+                \( \frac{d}{dx} \sin(x) = \cos(x) \)<br>
+                \( \frac{d}{dx} \cos(x) = -\sin(x) \)<br>
+                \( \frac{d}{dx} \tan(x) = \sec^2(x) \)<br>
+                \( \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}} \)
+            </p>
+        </li>
+    </ul>
 
-<h3>Observaciones útiles</h3>
-<ul>
-    <li class="texto">Las raíces pueden expresarse como potencias fraccionarias:  
-        \( \sqrt[n]{x} = x^{1/n} \), lo cual facilita su derivación.
-    </li>
-    <li class="texto">La evaluación de una derivada en un punto se realiza sustituyendo \( x \) en la expresión ya derivada.</li>
-</ul>
-
+    <h3>Observaciones útiles</h3>
+    <ul>
+        <li class="texto">Las raíces pueden expresarse como potencias fraccionarias:  
+            \( \sqrt[n]{x} = x^{1/n} \), lo cual facilita su derivación.
+        </li>
+        <li class="texto">La evaluación de una derivada en un punto se realiza sustituyendo \( x \) en la expresión ya derivada.</li>
+    </ul>
+</body>
 </html>

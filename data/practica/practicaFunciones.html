@@ -1,221 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="../../assets/css/styles.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Práctica: Funciones</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
 
-<div id="resolucion-f1">
-    <p class="texto examples">\( y = 3x + 1 \)</p>
-    <p class="texto">\( x \) no tiene ninguna restricción (raíces, divisiones, logaritmos), puede tomar cualquier valor \( \in \mathbb{R} \) </p>
-    <p class="texto">Por lo tanto, el dominio de la función \( y = 3x + 1 \) es \( \forall \, x \in \mathbb{R} \) </p>
-</div>
+<body>
+    <div id="resolucion-f1">
+        <p class="texto examples">\( y = 3x + 1 \)</p>
+        <p class="texto">\( x \) no tiene ninguna restricción (raíces, divisiones, logaritmos), puede tomar cualquier valor \( \in \mathbb{R} \) </p>
+        <p class="texto">Por lo tanto, el dominio de la función \( y = 3x + 1 \) es \( \forall \, x \in \mathbb{R} \) </p>
+    </div>
 
-<div id="resolucion-f2">
-    <p class="texto examples">\( y = \sqrt{x^2 - 6x + 8} \)</p>
-    <p class="texto">1. La raíz cuadrada está definida solo si el radicando es mayor o igual que cero:</p>
-    <p class="texto examples">\( x^2 - 6x + 8 \geq 0 \)</p>
-    <p class="texto">2. Factorizamos el trinomio:</p>
-    <p class="texto examples">\( (x - 2)(x - 4) \geq 0 \)</p>
-    <p class="texto">3. Resolvemos la inecuación usando el método de signos:</p>
-    <p class="texto examples">Las raíces son \( x = 2 \) y \( x = 4 \)</p>
-    <p class="texto examples">El producto es positivo cuando \( x \leq 2 \) o \( x \geq 4 \)</p>
-    <p class="texto">Por lo tanto, el dominio de la función es:</p>
-    <p class="texto examples">\( \text{Dom}(f) = x \leq 2 ; \, x \geq 4 \ \)</p>
-</div>
+    <div id="resolucion-f2">
+        <p class="texto examples">\( y = \sqrt{x^2 - 6x + 8} \)</p>
+        <p class="texto">1. La raíz cuadrada está definida solo si el radicando es mayor o igual que cero:</p>
+        <p class="texto examples">\( x^2 - 6x + 8 \geq 0 \)</p>
+        <p class="texto">2. Factorizamos el trinomio:</p>
+        <p class="texto examples">\( (x - 2)(x - 4) \geq 0 \)</p>
+        <p class="texto">3. Resolvemos la inecuación usando el método de signos:</p>
+        <p class="texto examples">Las raíces son \( x = 2 \) y \( x = 4 \)</p>
+        <p class="texto examples">El producto es positivo cuando \( x \leq 2 \) o \( x \geq 4 \)</p>
+        <p class="texto">Por lo tanto, el dominio de la función es:</p>
+        <p class="texto examples">\( \text{Dom}(f) = x \leq 2 ; \, x \geq 4 \ \)</p>
+    </div>
 
-<div id="resolucion-f3">
-    <p class="texto examples">\( y = \frac{4x}{x - 4} \)</p>
-    <p class="texto">1. Despejamos \( x \) en función de \( y \) para encontrar los valores posibles de salida (imagen):</p>
-    <p class="texto examples">\( y(x - 4) = 4x \)</p>
-    <p class="texto examples">\( yx - 4y = 4x \)</p>
-    <p class="texto examples">\( yx - 4x = 4y \)</p>
-    <p class="texto examples">\( x(y - 4) = 4y \)</p>
-    <p class="texto examples">\( x = \frac{4y}{y - 4} \)</p>
-    <p class="texto">2. La expresión es válida salvo cuando el denominador es cero:</p>
-    <p class="texto examples">\( y - 4 \neq 0 \Rightarrow y \neq 4 \)</p>
-    <p class="texto">Por lo tanto, la imagen de la función es:</p>
-    <p class="texto examples">\( \text{Im}(f) = \mathbb{R} \setminus \{4\} \)</p>
-</div>
+    <div id="resolucion-f3">
+        <p class="texto examples">\( y = \frac{4x}{x - 4} \)</p>
+        <p class="texto">1. Despejamos \( x \) en función de \( y \) para encontrar los valores posibles de salida (imagen):</p>
+        <p class="texto examples">\( y(x - 4) = 4x \)</p>
+        <p class="texto examples">\( yx - 4y = 4x \)</p>
+        <p class="texto examples">\( yx - 4x = 4y \)</p>
+        <p class="texto examples">\( x(y - 4) = 4y \)</p>
+        <p class="texto examples">\( x = \frac{4y}{y - 4} \)</p>
+        <p class="texto">2. La expresión es válida salvo cuando el denominador es cero:</p>
+        <p class="texto examples">\( y - 4 \neq 0 \Rightarrow y \neq 4 \)</p>
+        <p class="texto">Por lo tanto, la imagen de la función es:</p>
+        <p class="texto examples">\( \text{Im}(f) = \mathbb{R} \setminus \{4\} \)</p>
+    </div>
 
-<div id="resolucion-f4">
-    <p class="texto examples">\( y = \sqrt{x - 4} \)</p>
-    <p class="texto">1. Intercambiamos los roles de \( x \) y \( y \) para encontrar la función inversa:</p>
-    <p class="texto examples">\( x = \sqrt{y - 4} \)</p>
-    <p class="texto">2. Elevamos ambos lados al cuadrado para eliminar la raíz:</p>
-    <p class="texto examples">\( x^2 = y - 4 \)</p>
-    <p class="texto">3. Despejamos \( y \):</p>
-    <p class="texto examples">\( y = x^2 + 4 \)</p>
-    <p class="texto">Por lo tanto, la función inversa es:</p>
-    <p class="texto examples">\( f^{-1}(x) = x^2 + 4 \)</p>
-</div>
+    <div id="resolucion-f4">
+        <p class="texto examples">\( y = \sqrt{x - 4} \)</p>
+        <p class="texto">1. Intercambiamos los roles de \( x \) y \( y \) para encontrar la función inversa:</p>
+        <p class="texto examples">\( x = \sqrt{y - 4} \)</p>
+        <p class="texto">2. Elevamos ambos lados al cuadrado para eliminar la raíz:</p>
+        <p class="texto examples">\( x^2 = y - 4 \)</p>
+        <p class="texto">3. Despejamos \( y \):</p>
+        <p class="texto examples">\( y = x^2 + 4 \)</p>
+        <p class="texto">Por lo tanto, la función inversa es:</p>
+        <p class="texto examples">\( f^{-1}(x) = x^2 + 4 \)</p>
+    </div>
 
-<div id="resolucion-f5">
-    <p class="texto examples">\( y = \frac{3}{x^2 - 1} \)</p>
-    <p class="texto">1. Intercambiamos los roles de \( x \) y \( y \) para hallar la función inversa:</p>
-    <p class="texto examples">\( x = \frac{3}{y^2 - 1} \)</p>
-    <p class="texto">2. Multiplicamos ambos lados por \( y^2 - 1 \):</p>
-    <p class="texto examples">\( x(y^2 - 1) = 3 \)</p>
-    <p class="texto">3. Dividimos ambos lados entre \( x \):</p>
-    <p class="texto examples">\( y^2 - 1 = \frac{3}{x} \)</p>
-    <p class="texto">4. Sumamos 1 a ambos lados:</p>
-    <p class="texto examples">\( y^2 = \frac{3}{x} + 1 = \frac{3 + x}{x} \)</p>
-    <p class="texto">5. Aplicamos raíz cuadrada:</p>
-    <p class="texto examples">\( y = \sqrt{\frac{3 + x}{x}} \)</p>
-    <p class="texto">Por lo tanto, la función inversa es:</p>
-    <p class="texto examples">\( f^{-1}(x) = \sqrt{\frac{3 + x}{x}} \)</p>
-</div>
+    <div id="resolucion-f5">
+        <p class="texto examples">\( y = \frac{3}{x^2 - 1} \)</p>
+        <p class="texto">1. Intercambiamos los roles de \( x \) y \( y \) para hallar la función inversa:</p>
+        <p class="texto examples">\( x = \frac{3}{y^2 - 1} \)</p>
+        <p class="texto">2. Multiplicamos ambos lados por \( y^2 - 1 \):</p>
+        <p class="texto examples">\( x(y^2 - 1) = 3 \)</p>
+        <p class="texto">3. Dividimos ambos lados entre \( x \):</p>
+        <p class="texto examples">\( y^2 - 1 = \frac{3}{x} \)</p>
+        <p class="texto">4. Sumamos 1 a ambos lados:</p>
+        <p class="texto examples">\( y^2 = \frac{3}{x} + 1 = \frac{3 + x}{x} \)</p>
+        <p class="texto">5. Aplicamos raíz cuadrada:</p>
+        <p class="texto examples">\( y = \sqrt{\frac{3 + x}{x}} \)</p>
+        <p class="texto">Por lo tanto, la función inversa es:</p>
+        <p class="texto examples">\( f^{-1}(x) = \sqrt{\frac{3 + x}{x}} \)</p>
+    </div>
 
-<div id="resolucion-f6">
-    <p class="texto">1. Queremos hallar \( f(g(x)) \), con:</p>
-    <p class="texto examples">\( f(x) = \frac{x - 4}{x - 1} \), &nbsp;&nbsp; \( g(x) = x^2 + 3x + 1 \)</p>
-    <p class="texto">2. Sustituimos \( g(x) \) en la función \( f \):</p>
-    <p class="texto examples">\( f(g(x)) = f(x^2 + 3x + 1) = \frac{(x^2 + 3x + 1) - 4}{(x^2 + 3x + 1) - 1} \)</p>
-    <p class="texto">3. Simplificamos el numerador:</p>
-    <p class="texto examples">\( x^2 + 3x + 1 - 4 = x^2 + 3x - 3 \)</p>
-    <p class="texto">4. Simplificamos el denominador:</p>
-    <p class="texto examples">\( x^2 + 3x + 1 - 1 = x^2 + 3x \)</p>
-    <p class="texto">Entonces, la función compuesta es:</p>
-    <p class="texto examples">\( f(g(x)) = \frac{x^2 + 3x - 3}{x^2 + 3x} \)</p>
-</div>
+    <div id="resolucion-f6">
+        <p class="texto">1. Queremos hallar \( f(g(x)) \), con:</p>
+        <p class="texto examples">\( f(x) = \frac{x - 4}{x - 1} \), &nbsp;&nbsp; \( g(x) = x^2 + 3x + 1 \)</p>
+        <p class="texto">2. Sustituimos \( g(x) \) en la función \( f \):</p>
+        <p class="texto examples">\( f(g(x)) = f(x^2 + 3x + 1) = \frac{(x^2 + 3x + 1) - 4}{(x^2 + 3x + 1) - 1} \)</p>
+        <p class="texto">3. Simplificamos el numerador:</p>
+        <p class="texto examples">\( x^2 + 3x + 1 - 4 = x^2 + 3x - 3 \)</p>
+        <p class="texto">4. Simplificamos el denominador:</p>
+        <p class="texto examples">\( x^2 + 3x + 1 - 1 = x^2 + 3x \)</p>
+        <p class="texto">Entonces, la función compuesta es:</p>
+        <p class="texto examples">\( f(g(x)) = \frac{x^2 + 3x - 3}{x^2 + 3x} \)</p>
+    </div>
 
-<div id="resolucion-f7">
-    <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
-    <p class="texto examples">\( f(x) = x^5 \), &nbsp;&nbsp; \( g(x) = 2x \), &nbsp;&nbsp; \( h(x) = \sin{x} \)</p>
-    <p class="texto">2. Primero aplicamos la función más interna \( h(x) \):</p>
-    <p class="texto examples">\( h(x) = \sin{x} \)</p>
-    <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
-    <p class="texto examples">\( g(h(x)) = g(\sin{x}) = 2 \cdot \sin{x} \)</p>
-    <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
-    <p class="texto examples">\( f(g(h(x))) = f(2\sin{x}) = (2\sin{x})^5 \)</p>
-    <p class="texto">5. Simplificamos la expresión:</p>
-    <p class="texto examples">\( (2\sin{x})^5 = 2^5 \cdot \sin^5{x} = 32\sin^5{x} \)</p>
-    <p class="texto">Por lo tanto, la composición final es:</p>
-    <p class="texto examples">\( f \circ g \circ h = 32\sin^5{x} \)</p>
-</div>
+    <div id="resolucion-f7">
+        <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
+        <p class="texto examples">\( f(x) = x^5 \), &nbsp;&nbsp; \( g(x) = 2x \), &nbsp;&nbsp; \( h(x) = \sin{x} \)</p>
+        <p class="texto">2. Primero aplicamos la función más interna \( h(x) \):</p>
+        <p class="texto examples">\( h(x) = \sin{x} \)</p>
+        <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
+        <p class="texto examples">\( g(h(x)) = g(\sin{x}) = 2 \cdot \sin{x} \)</p>
+        <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
+        <p class="texto examples">\( f(g(h(x))) = f(2\sin{x}) = (2\sin{x})^5 \)</p>
+        <p class="texto">5. Simplificamos la expresión:</p>
+        <p class="texto examples">\( (2\sin{x})^5 = 2^5 \cdot \sin^5{x} = 32\sin^5{x} \)</p>
+        <p class="texto">Por lo tanto, la composición final es:</p>
+        <p class="texto examples">\( f \circ g \circ h = 32\sin^5{x} \)</p>
+    </div>
 
-<div id="resolucion-f8">
-    <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
-    <p class="texto examples">\( f(x) = \sqrt{x} \), &nbsp;&nbsp; \( g(x) = x^2 + 1 \), &nbsp;&nbsp; \( h(x) = \cos{x} \)</p>
-    <p class="texto">2. Primero aplicamos la función más interna \( h(x) \):</p>
-    <p class="texto examples">\( h(x) = \cos{x} \)</p>
-    <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
-    <p class="texto examples">\( g(h(x)) = g(\cos{x}) = (\cos{x})^2 + 1 = \cos^2{x} + 1 \)</p>
-    <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
-    <p class="texto examples">\( f(g(h(x))) = f(\cos^2{x} + 1) = \sqrt{\cos^2{x} + 1} \)</p>
-    <p class="texto">Por lo tanto, la composición final es:</p>
-    <p class="texto examples">\( f \circ g \circ h = \sqrt{\cos^2{x} + 1} \)</p>
-</div>
+    <div id="resolucion-f8">
+        <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
+        <p class="texto examples">\( f(x) = \sqrt{x} \), &nbsp;&nbsp; \( g(x) = x^2 + 1 \), &nbsp;&nbsp; \( h(x) = \cos{x} \)</p>
+        <p class="texto">2. Primero aplicamos la función más interna \( h(x) \):</p>
+        <p class="texto examples">\( h(x) = \cos{x} \)</p>
+        <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
+        <p class="texto examples">\( g(h(x)) = g(\cos{x}) = (\cos{x})^2 + 1 = \cos^2{x} + 1 \)</p>
+        <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
+        <p class="texto examples">\( f(g(h(x))) = f(\cos^2{x} + 1) = \sqrt{\cos^2{x} + 1} \)</p>
+        <p class="texto">Por lo tanto, la composición final es:</p>
+        <p class="texto examples">\( f \circ g \circ h = \sqrt{\cos^2{x} + 1} \)</p>
+    </div>
 
-<div id="resolucion-f9">
-    <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
-    <p class="texto examples">\( f(x) = x^3 - 1 \), &nbsp;&nbsp; \( g(x) = 5x \), &nbsp;&nbsp; \( h(x) = \log_2{x} \)</p>
-    <p class="texto">2. Comenzamos aplicando la función más interna \( h(x) \):</p>
-    <p class="texto examples">\( h(x) = \log_2{x} \)</p>
-    <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
-    <p class="texto examples">\( g(h(x)) = g(\log_2{x}) = 5 \cdot \log_2{x} \)</p>
-    <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
-    <p class="texto examples">\( f(g(h(x))) = f(5\log_2{x}) = (5\log_2{x})^3 - 1 \)</p>
-    <p class="texto">5. Desarrollamos la expresión:</p>
-    <p class="texto examples">\( = 125\log_2^3{x} - 1 \)</p>
-    <p class="texto">Por lo tanto, la composición final es:</p>
-    <p class="texto examples">\( f \circ g \circ h = 125\log_2^3{x} - 1 \)</p>
-</div>
+    <div id="resolucion-f9">
+        <p class="texto">1. Queremos hallar \( f \circ g \circ h \), con:</p>
+        <p class="texto examples">\( f(x) = x^3 - 1 \), &nbsp;&nbsp; \( g(x) = 5x \), &nbsp;&nbsp; \( h(x) = \log_2{x} \)</p>
+        <p class="texto">2. Comenzamos aplicando la función más interna \( h(x) \):</p>
+        <p class="texto examples">\( h(x) = \log_2{x} \)</p>
+        <p class="texto">3. Aplicamos \( g \) al resultado anterior:</p>
+        <p class="texto examples">\( g(h(x)) = g(\log_2{x}) = 5 \cdot \log_2{x} \)</p>
+        <p class="texto">4. Finalmente aplicamos \( f \) a la composición anterior:</p>
+        <p class="texto examples">\( f(g(h(x))) = f(5\log_2{x}) = (5\log_2{x})^3 - 1 \)</p>
+        <p class="texto">5. Desarrollamos la expresión:</p>
+        <p class="texto examples">\( = 125\log_2^3{x} - 1 \)</p>
+        <p class="texto">Por lo tanto, la composición final es:</p>
+        <p class="texto examples">\( f \circ g \circ h = 125\log_2^3{x} - 1 \)</p>
+    </div>
 
-<div id="resolucion-f10">
-    <p class="texto">1. Partimos de la función original:</p>
-    <p class="texto examples">\( f(x) = \frac{2}{x^3 + 1} \)</p>
-    <p class="texto">2. Para hallar la inversa \( f^{-1}(x) \), intercambiamos \( x \) e \( y \):</p>
-    <p class="texto examples">\( x = \frac{2}{y^3 + 1} \)</p>
-    <p class="texto">3. Multiplicamos ambos lados por \( (y^3 + 1) \):</p>
-    <p class="texto examples">\( x(y^3 + 1) = 2 \)</p>
-    <p class="texto">4. Dividimos ambos lados por \( x \):</p>
-    <p class="texto examples">\( y^3 + 1 = \frac{2}{x} \)</p>
-    <p class="texto">5. Restamos 1 a ambos lados:</p>
-    <p class="texto examples">\( y^3 = \frac{2}{x} - 1 \)</p>
-    <p class="texto">6. Simplificamos la expresión:</p>
-    <p class="texto examples">\( y^3 = \frac{2 - x}{x} \)</p>
-    <p class="texto">7. Tomamos la raíz cúbica de ambos lados:</p>
-    <p class="texto examples">\( y = \sqrt[3]{\frac{2 - x}{x}} \)</p>
-    <p class="texto">Por lo tanto, la función inversa es:</p>
-    <p class="texto examples">\( f^{-1}(x) = \sqrt[3]{\frac{2 - x}{x}} \)</p>
-</div>
+    <div id="resolucion-f10">
+        <p class="texto">1. Partimos de la función original:</p>
+        <p class="texto examples">\( f(x) = \frac{2}{x^3 + 1} \)</p>
+        <p class="texto">2. Para hallar la inversa \( f^{-1}(x) \), intercambiamos \( x \) e \( y \):</p>
+        <p class="texto examples">\( x = \frac{2}{y^3 + 1} \)</p>
+        <p class="texto">3. Multiplicamos ambos lados por \( (y^3 + 1) \):</p>
+        <p class="texto examples">\( x(y^3 + 1) = 2 \)</p>
+        <p class="texto">4. Dividimos ambos lados por \( x \):</p>
+        <p class="texto examples">\( y^3 + 1 = \frac{2}{x} \)</p>
+        <p class="texto">5. Restamos 1 a ambos lados:</p>
+        <p class="texto examples">\( y^3 = \frac{2}{x} - 1 \)</p>
+        <p class="texto">6. Simplificamos la expresión:</p>
+        <p class="texto examples">\( y^3 = \frac{2 - x}{x} \)</p>
+        <p class="texto">7. Tomamos la raíz cúbica de ambos lados:</p>
+        <p class="texto examples">\( y = \sqrt[3]{\frac{2 - x}{x}} \)</p>
+        <p class="texto">Por lo tanto, la función inversa es:</p>
+        <p class="texto examples">\( f^{-1}(x) = \sqrt[3]{\frac{2 - x}{x}} \)</p>
+    </div>
 
-<div id="resolucion-f11">
-    <p class="texto">1. Función original:</p>
-    <p class="texto examples">\( f(x) = \sqrt{4 - \frac{1}{x}} \)</p>
-    <p class="texto">2. Para hallar la inversa, intercambiamos \( x \) e \( y \) y resolvemos:</p>
-    <p class="texto examples">\( x = \sqrt{4 - \frac{1}{y}} \)</p>
-    <p class="texto">3. Elevamos ambos lados al cuadrado para eliminar la raíz:</p>
-    <p class="texto examples">\( x^2 = 4 - \frac{1}{y} \)</p>
-    <p class="texto">4. Reorganizamos términos para aislar \( \frac{1}{y} \):</p>
-    <p class="texto examples">\( \frac{1}{y} = 4 - x^2 \)</p>
-    <p class="texto">5. Invertimos ambos lados para despejar \( y \):</p>
-    <p class="texto examples">\( y = \frac{1}{4 - x^2} \)</p>
-    <p class="texto">Por lo tanto, la función inversa es:</p>
-    <p class="texto examples">\( f^{-1}(x) = \frac{1}{4 - x^2} \)</p>
-</div>
+    <div id="resolucion-f11">
+        <p class="texto">1. Función original:</p>
+        <p class="texto examples">\( f(x) = \sqrt{4 - \frac{1}{x}} \)</p>
+        <p class="texto">2. Para hallar la inversa, intercambiamos \( x \) e \( y \) y resolvemos:</p>
+        <p class="texto examples">\( x = \sqrt{4 - \frac{1}{y}} \)</p>
+        <p class="texto">3. Elevamos ambos lados al cuadrado para eliminar la raíz:</p>
+        <p class="texto examples">\( x^2 = 4 - \frac{1}{y} \)</p>
+        <p class="texto">4. Reorganizamos términos para aislar \( \frac{1}{y} \):</p>
+        <p class="texto examples">\( \frac{1}{y} = 4 - x^2 \)</p>
+        <p class="texto">5. Invertimos ambos lados para despejar \( y \):</p>
+        <p class="texto examples">\( y = \frac{1}{4 - x^2} \)</p>
+        <p class="texto">Por lo tanto, la función inversa es:</p>
+        <p class="texto examples">\( f^{-1}(x) = \frac{1}{4 - x^2} \)</p>
+    </div>
 
-<div id="resolucion-f12">
-    <p class="texto">1. Función original:</p>
-    <p class="texto examples">\( f(x) = \frac{5}{e^x - 2} \)</p>
-    <p class="texto">2. Para hallar la inversa, intercambiamos \( x \) e \( y \):</p>
-    <p class="texto examples">\( x = \frac{5}{e^y - 2} \)</p>
-    <p class="texto">3. Multiplicamos ambos lados por \( (e^y - 2) \):</p>
-    <p class="texto examples">\( x(e^y - 2) = 5 \)</p>
-    <p class="texto">4. Dividimos ambos lados por \( x \):</p>
-    <p class="texto examples">\( e^y - 2 = \frac{5}{x} \)</p>
-    <p class="texto">5. Sumamos 2 a ambos lados:</p>
-    <p class="texto examples">\( e^y = \frac{5}{x} + 2 \)</p>
-    <p class="texto">6. Combinamos términos:</p>
-    <p class="texto examples">\( e^y = \frac{5 + 2x}{x} \)</p>
-    <p class="texto">7. Aplicamos logaritmo natural a ambos lados:</p>
-    <p class="texto examples">\( y = \ln\left(\frac{5 + 2x}{x}\right) \)</p>
-    <p class="texto">Por lo tanto, la función inversa es:</p>
-    <p class="texto examples">\( f^{-1}(x) = \ln\left(\frac{5 + 2x}{x}\right) \)</p>
-</div>
+    <div id="resolucion-f12">
+        <p class="texto">1. Función original:</p>
+        <p class="texto examples">\( f(x) = \frac{5}{e^x - 2} \)</p>
+        <p class="texto">2. Para hallar la inversa, intercambiamos \( x \) e \( y \):</p>
+        <p class="texto examples">\( x = \frac{5}{e^y - 2} \)</p>
+        <p class="texto">3. Multiplicamos ambos lados por \( (e^y - 2) \):</p>
+        <p class="texto examples">\( x(e^y - 2) = 5 \)</p>
+        <p class="texto">4. Dividimos ambos lados por \( x \):</p>
+        <p class="texto examples">\( e^y - 2 = \frac{5}{x} \)</p>
+        <p class="texto">5. Sumamos 2 a ambos lados:</p>
+        <p class="texto examples">\( e^y = \frac{5}{x} + 2 \)</p>
+        <p class="texto">6. Combinamos términos:</p>
+        <p class="texto examples">\( e^y = \frac{5 + 2x}{x} \)</p>
+        <p class="texto">7. Aplicamos logaritmo natural a ambos lados:</p>
+        <p class="texto examples">\( y = \ln\left(\frac{5 + 2x}{x}\right) \)</p>
+        <p class="texto">Por lo tanto, la función inversa es:</p>
+        <p class="texto examples">\( f^{-1}(x) = \ln\left(\frac{5 + 2x}{x}\right) \)</p>
+    </div>
 
-<div id="resolucion-f13">
-    <p class="texto">1. Función original:</p>
-    <p class="texto examples">\( f(x) = \frac{x + 1}{x - 2} \)</p>
-    <p class="texto">2. Para hallar la inversa, intercambiamos \( x \) e \( y \):</p>
-    <p class="texto examples">\( x = \frac{y + 1}{y - 2} \)</p>
-    <p class="texto">3. Multiplicamos ambos lados por \( (y - 2) \):</p>
-    <p class="texto examples">\( x(y - 2) = y + 1 \)</p>
-    <p class="texto">4. Distribuimos \( x \):</p>
-    <p class="texto examples">\( xy - 2x = y + 1 \)</p>
-    <p class="texto">5. Agrupamos términos con \( y \):</p>
-    <p class="texto examples">\( xy - y = 2x + 1 \)</p>
-    <p class="texto">6. Factorizamos \( y \):</p>
-    <p class="texto examples">\( y(x - 1) = 2x + 1 \)</p>
-    <p class="texto">7. Despejamos \( y \):</p>
-    <p class="texto examples">\( y = \frac{2x + 1}{x - 1} \)</p>
-    <p class="texto">Por lo tanto, la función inversa es:</p>
-    <p class="texto examples">\( f^{-1}(x) = \frac{2x + 1}{x - 1} \)</p>
-</div>  
+    <div id="resolucion-f13">
+        <p class="texto">1. Función original:</p>
+        <p class="texto examples">\( f(x) = \frac{x + 1}{x - 2} \)</p>
+        <p class="texto">2. Para hallar la inversa, intercambiamos \( x \) e \( y \):</p>
+        <p class="texto examples">\( x = \frac{y + 1}{y - 2} \)</p>
+        <p class="texto">3. Multiplicamos ambos lados por \( (y - 2) \):</p>
+        <p class="texto examples">\( x(y - 2) = y + 1 \)</p>
+        <p class="texto">4. Distribuimos \( x \):</p>
+        <p class="texto examples">\( xy - 2x = y + 1 \)</p>
+        <p class="texto">5. Agrupamos términos con \( y \):</p>
+        <p class="texto examples">\( xy - y = 2x + 1 \)</p>
+        <p class="texto">6. Factorizamos \( y \):</p>
+        <p class="texto examples">\( y(x - 1) = 2x + 1 \)</p>
+        <p class="texto">7. Despejamos \( y \):</p>
+        <p class="texto examples">\( y = \frac{2x + 1}{x - 1} \)</p>
+        <p class="texto">Por lo tanto, la función inversa es:</p>
+        <p class="texto examples">\( f^{-1}(x) = \frac{2x + 1}{x - 1} \)</p>
+    </div>  
 
-<div id="resolucion-f14">
-    <p class="texto">1. Función original:</p>
-    <p class="texto examples">\( y = \frac{x + 5}{x^2 - 5x + 6} \)</p>
-    <p class="texto">2. Para hallar el dominio, identificamos los valores que hacen cero el denominador:</p>
-    <p class="texto examples">\( x^2 - 5x + 6 = 0 \)</p>
-    <p class="texto">3. Factorizamos el denominador:</p>
-    <p class="texto examples">\( (x - 2)(x - 3) = 0 \)</p>
-    <p class="texto">4. Hallamos las raíces:</p>
-    <p class="texto examples">\( x - 2 = 0 \) ⇒ \( x = 2 \)</p>
-    <p class="texto examples">\( x - 3 = 0 \) ⇒ \( x = 3 \)</p>
-    <p class="texto">5. El dominio incluye todos los reales excepto estos valores:</p>
-    <p class="texto examples">Dominio: \( x \neq 2 \) y \( x \neq 3 \)</p>
-</div>
+    <div id="resolucion-f14">
+        <p class="texto">1. Función original:</p>
+        <p class="texto examples">\( y = \frac{x + 5}{x^2 - 5x + 6} \)</p>
+        <p class="texto">2. Para hallar el dominio, identificamos los valores que hacen cero el denominador:</p>
+        <p class="texto examples">\( x^2 - 5x + 6 = 0 \)</p>
+        <p class="texto">3. Factorizamos el denominador:</p>
+        <p class="texto examples">\( (x - 2)(x - 3) = 0 \)</p>
+        <p class="texto">4. Hallamos las raíces:</p>
+        <p class="texto examples">\( x - 2 = 0 \) ⇒ \( x = 2 \)</p>
+        <p class="texto examples">\( x - 3 = 0 \) ⇒ \( x = 3 \)</p>
+        <p class="texto">5. El dominio incluye todos los reales excepto estos valores:</p>
+        <p class="texto examples">Dominio: \( x \neq 2 \) y \( x \neq 3 \)</p>
+    </div>
 
-<div id="resolucion-f15">
-    <p class="texto">1. Función original:</p>
-    <p class="texto examples">\( y = \sqrt{2x - 8} + \frac{1}{x-5} \)</p>
-    <p class="texto">2. Analizamos cada parte por separado:</p>
-    <p class="texto">3. Para la raíz cuadrada \( \sqrt{2x - 8} \):</p>
-    <p class="texto examples">\( 2x - 8 \geq 0 \)</p>
-    <p class="texto examples">\( 2x \geq 8 \)</p>
-    <p class="texto examples">\( x \geq 4 \)</p>
-    <p class="texto">4. Para la fracción \( \frac{1}{x-5} \):</p>
-    <p class="texto examples">\( x - 5 \neq 0 \)</p>
-    <p class="texto examples">\( x \neq 5 \)</p>
-    <p class="texto">5. Combinamos ambas condiciones:</p>
-    <p class="texto examples">Dominio: \( x \geq 4 \) ∧ \( x \neq 5 \)</p>
-</div>
+    <div id="resolucion-f15">
+        <p class="texto">1. Función original:</p>
+        <p class="texto examples">\( y = \sqrt{2x - 8} + \frac{1}{x-5} \)</p>
+        <p class="texto">2. Analizamos cada parte por separado:</p>
+        <p class="texto">3. Para la raíz cuadrada \( \sqrt{2x - 8} \):</p>
+        <p class="texto examples">\( 2x - 8 \geq 0 \)</p>
+        <p class="texto examples">\( 2x \geq 8 \)</p>
+        <p class="texto examples">\( x \geq 4 \)</p>
+        <p class="texto">4. Para la fracción \( \frac{1}{x-5} \):</p>
+        <p class="texto examples">\( x - 5 \neq 0 \)</p>
+        <p class="texto examples">\( x \neq 5 \)</p>
+        <p class="texto">5. Combinamos ambas condiciones:</p>
+        <p class="texto examples">Dominio: \( x \geq 4 \) ∧ \( x \neq 5 \)</p>
+    </div>
+</body>
+</html>
