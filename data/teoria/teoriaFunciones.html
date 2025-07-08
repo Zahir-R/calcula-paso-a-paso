@@ -1,74 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
-<h2>Funciones</h2>
-<p class="texto"> 
-    Una función es una relación matemática que asigna a cada elemento de un conjunto (llamado dominio) un único elemento de otro conjunto (llamado codominio). En otras palabras, una función toma un valor de entrada (argumento) y produce exactamente un valor de salida (resultado). 
-</p>
-<p class="texto">
-    <strong>Características clave:</strong>
-</p>
-<ul>
-    <li class="texto"><strong>Unicidad:</strong> Para cada entrada en el dominio, la función devuelve una y solo una salida.</li>
-    <li class="texto"><strong>Dominio:</strong> Conjunto de todos los valores de entrada posibles.</li>
-    <li class="texto"><strong>Codominio:</strong> Conjunto de valores de salida posibles (puede incluir elementos no alcanzados por la función).</li>
-</ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teoría: Funciones</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h2>Funciones</h2>
+    <p class="texto">
+        Una función es una relación matemática que asigna a cada elemento de un conjunto (llamado <strong>dominio</strong>) un único elemento de otro conjunto (llamado <strong>codominio</strong>). En otras palabras, una función toma un valor de entrada (argumento) y produce exactamente un valor de salida (resultado).
+    </p>
 
-<h3>Notación:</h3>
+    <h3>Conceptos clave</h3>
+    <ul>
+        <li class="texto"><strong>Unicidad:</strong> Para cada entrada en el dominio, la función devuelve una y solo una salida.</li>
+        <li class="texto"><strong>Dominio:</strong> Conjunto de todos los valores de entrada posibles para la función.</li>
+        <li class="texto"><strong>Codominio:</strong> Conjunto de todos los posibles valores de salida.</li>
+        <li class="texto"><strong>Imagen o Rango:</strong> Subconjunto del codominio que contiene los valores que la función realmente toma.</li>
+    </ul>
 
-<p class="texto">
-    Se representa comúnmente como:<br> <p class="examples texto">\( f: A \to B\)</p>Donde:
-</p>
-<p class="texto">
-    \(f \) es el nombre de la función<br> \(A\) es el dominio<br> \(B\) es el codominio.
-</p>
-<p class="texto">
-    Para un elemento \( x \) en el dominio, el valor de salida se denota como \( f(x) \).
-</p>
-<p class="exampleHeadings texto">
-    Ejemplo 1: Función Lineal
-</p>
-<p class="examples texto">
-    \( f(x) = 2x + 3 \)<br>
-</p>
-<p class="texto">
-    Dominio: Todos los números reales (\( \mathbb{R} \)).<br>
-    Codominio: Todos los números reales (\( \mathbb{R} \)).<br>
-</p>
-<p class="examples texto">
-    Si \( x = 4 \), entonces \( f(4) = 2(4) + 3 = 11 \)
-</p>
-<p class="exampleHeadings texto">Ejemplo 2: Función Cuadrática</p>
-<p class="examples texto">
-    \( g(x) = x^2 \)<br>
-</p>
-<p class="texto">
-    Dominio: Todos los números reales (\( \mathbb{R} \)).<br>
-    Codominio: Todos los números reales no negativos (\( \mathbb{R}_{\geq 0} \)).<br>
-</p>
-<p class="examples texto">
-    Si \( x = -3 \), entonces \( g(-3) = (-3)^2 = 9 \)
-</p>
+    <h3>Notación</h3>
+    <p class="texto">
+        Se representa comúnmente como:
+    </p>
+    <p class="examples texto">
+        \( f: A \to B \)
+    </p>
+    <p class="texto">
+        Donde:<br />
+        \( A \) es el dominio, <br />
+        \( B \) es el codominio.<br />
+        Para un elemento \( x \in A \), el valor de salida se denota como \( f(x) \).
+    </p>
 
-<h3>Tipos Comunes</h3>
-<ul>
-    <li class="texto">
-        <strong>Inyectiva (uno a uno):</strong> Ningún valor de salida se repite para entradas distintas.<br>
-        <p class="examples texto">\( f(x) = 2x + 1\)</p>
-        Esta función es inyectiva porque cada valor de \( x \) produce un valor único de \( f(x) \).
-    </li>
-    <li class="texto">
-        <strong>Sobreyectiva o Suryectiva:</strong> El codominio es igual a la imagen de la función.<br>
-        <p class="examples texto">\( f(x) = x^3 \)</p>
-        Es sobreyectiva porque para cada valor en \( \mathbb{R} \), hay un \( x \) tal que \( f(x) = y \).    
-    </li>
-    <li class="texto">
-        <strong>Biyectiva:</strong> Es tanto inyectiva como sobreyectiva.<br>
-        <p class="examples texto">
-            \( f(x) = 2x + 1 \)
-        </p>
-        Es biyectiva porque cada valor de \( x \) produce un valor único de \( f(x) \) y cubre todo el codominio.
-    </li>
-</ul>
+    <h3>Dominio y rango</h3>
+    <p class="texto">
+        Para determinar el dominio de una función, es necesario identificar los valores de entrada que no causan problemas en la expresión matemática, como divisiones entre cero, raíces de índice par con radicando negativo o logaritmos de argumentos negativos o cero.
+    </p>
+    <ul>
+        <li class="texto">Para raíces pares: el radicando debe ser mayor o igual que cero.</li>
+        <li class="texto">Para fracciones: el denominador no puede ser cero.</li>
+        <li class="texto">Para logaritmos: el argumento debe ser estrictamente positivo.</li>
+    </ul>
 
+    <h3>Funciones inversas</h3>
+    <p class="texto">
+        Una función inversa "deshace" la acción de la función original. Para que exista una función inversa, la función debe ser <strong>biyectiva</strong> (es decir, inyectiva y sobreyectiva).
+    </p>
+    <p class="texto">
+        El proceso para hallar la inversa es:
+    </p>
+    <ol>
+        <li class="texto">Intercambiar las variables \( x \) y \( y \).</li>
+        <li class="texto">Despejar \( y \) en función de \( x \).</li>
+    </ol>
+    <p class="texto">
+        Gráficamente, la función inversa es la reflexión de la función original respecto a la línea \( y = x \).
+    </p>
+
+    <h3>Composición de funciones</h3>
+    <p class="texto">
+        La composición de funciones consiste en aplicar una función al resultado de otra, denotada como:
+    </p>
+    <p class="examples texto">
+        \( (f \circ g)(x) = f(g(x)) \)
+    </p>
+    <p class="texto">
+        Es importante notar que la composición no siempre es conmutativa; es decir, en general \( f \circ g \neq g \circ f \).
+    </p>
+
+    <h3>Tipos comunes de funciones</h3>
+    <ul>
+        <li class="texto">
+            <strong>Lineales:</strong> funciones de la forma \( f(x) = mx + b \). Dominio y codominio usualmente todos los reales.
+        </li>
+        <li class="texto">
+            <strong>Polinómicas:</strong> expresiones algebraicas con sumas y productos de potencias enteras no negativas.
+        </li>
+        <li class="texto">
+            <strong>Racionales:</strong> cocientes de polinomios, donde el dominio excluye los valores que anulan el denominador.
+        </li>
+        <li class="texto">
+            <strong>Radicales:</strong> involucran raíces; para raíces pares, el radicando debe ser ≥ 0.
+        </li>
+        <li class="texto">
+            <strong>Exponenciales y logarítmicas:</strong> funciones con restricciones en dominio y rango específicos.
+        </li>
+    </ul>
+
+    <h3>Ejemplos</h3>
+
+    <p class="exampleHeadings texto">Ejemplo 1: Función Lineal</p>
+    <p class="examples texto">
+        \( f(x) = 2x + 3 \)
+    </p>
+    <p class="texto">
+        Dominio: Todos los números reales (\( \mathbb{R} \)).<br />
+        Codominio: Todos los números reales (\( \mathbb{R} \)).<br />
+        Si \( x = 4 \), entonces \( f(4) = 2(4) + 3 = 11 \).
+    </p>
+
+    <p class="exampleHeadings texto">Ejemplo 2: Función Cuadrática</p>
+    <p class="examples texto">
+        \( g(x) = x^2 \)
+    </p>
+    <p class="texto">
+        Dominio: Todos los números reales (\( \mathbb{R} \)).<br />
+        Codominio: Todos los números reales no negativos (\( \mathbb{R}_{\geq 0} \)).
+    </p>
+    <p class="examples texto">
+        Si \( x = -3 \), entonces \( g(-3) = (-3)^2 = 9 \).
+    </p>
+
+    <h3>Funciones Inyectiva, Sobreyectiva y Biyectiva</h3>
+    <ul>
+        <li class="texto">
+            <strong>Inyectiva (uno a uno):</strong> Cada valor de salida corresponde a una única entrada.<br />
+            <p class="examples texto">Ejemplo: \( f(x) = 2x + 1 \).</p>
+        </li>
+        <li class="texto">
+            <strong>Sobreyectiva:</strong> El codominio es igual a la imagen.<br />
+            <p class="examples texto">Ejemplo: \( f(x) = x^3 \).</p>
+        </li>
+        <li class="texto">
+            <strong>Biyectiva:</strong> Es inyectiva y sobreyectiva.<br />
+            <p class="examples texto">Ejemplo: \( f(x) = 2x + 1 \).</p>
+        </li>
+    </ul>
+
+    <h3>Representación Gráfica</h3>
+    <p class="texto">
+        Las gráficas de funciones y sus inversas son simétricas respecto a la línea \( y = x \). Visualizar las funciones ayuda a comprender el dominio, rango y comportamiento general.
+    </p>
+</body>
 </html>

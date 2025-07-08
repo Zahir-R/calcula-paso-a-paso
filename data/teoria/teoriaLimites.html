@@ -1,69 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
-<h2>Límites</h2>
-<p class="texto">
-    Un límite es un concepto fundamental en cálculo que describe el valor al que se aproxima una función (o sucesión) cuando su argumento (o índice) se acerca a un punto determinado, sin necesariamente alcanzarlo. En términos intuitivos, el límite captura el comportamiento de una función cerca de un punto, incluso si la función no está definida en ese punto.
-</p>
-<p class="texto">
-    <strong>Definición formal</strong>
-</p>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teoría: Límites</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h2>Límites</h2>
+    <p class="texto">
+        Un límite es un concepto fundamental en cálculo que describe el valor al que se aproxima una función (o sucesión) cuando su argumento (o índice) se acerca a un punto determinado, sin necesariamente alcanzarlo. En términos intuitivos, el límite captura el comportamiento de una función cerca de un punto, incluso si la función no está definida en ese punto.
+    </p>
 
-<p class="texto">
-    Decimos que el límite de una función \( f(x) \) cuando \( x \) tiende a \( L \), denotado como:<br>
-    <p class="examples texto">
+    <p class="texto"><strong>Definición formal</strong></p>
+
+    <p class="texto">
+        Decimos que el límite de una función \( f(x) \) cuando \( x \) tiende a \( a \), denotado como:
+    </p>
+    <p class="examples texto" style="margin-left: 20px;">
         \( \lim_{x \to a} f(x) = L \)
     </p>
-    Si para todo \( \epsilon > 0 \) existe un \( \delta > 0 \) tal que:<br>
-    <p class="examples texto">
+    <p class="texto">
+        Si para todo \( \epsilon > 0 \) existe un \( \delta > 0 \) tal que:
+    </p>
+    <p class="examples texto" style="margin-left: 20px;">
         Si \( 0 < |x - a| < \delta \), entonces \( |f(x) - L| < \epsilon \)
     </p>
-    Esto significa que \( f(x) \) se acerca arbitrariamente a \( L \) cuando \( x \) está suficientemente cerca de \( a \).
-</p>
+    <p class="texto">
+        Esto significa que \( f(x) \) se acerca arbitrariamente a \( L \) cuando \( x \) está suficientemente cerca de \( a \).
+    </p>
 
-<h3>Ejemplos</h3>
-<ul>
-    <li class="texto">
-        <strong>Límite básico:</strong>
-        <p class="examples texto">
-            \( \lim_{x \to 2} (3x + 1) = 7 \)
-        </p>
-        <i>Explicación:</i> Cuando \( x \) se acerca a 2, 3x + 1 se acerca a 3(2) + 1 = 7.
-    </li>
-    <li class="texto">
-        <strong>Límite con indeterminación:</strong>
-        <p class="examples texto">
-            \( \lim_{x \to 1} \frac{x^2 - 1} {x - 1} = 2 \)
-        </p>
-        <i>Explicación:</i> Simplificando, \( \frac{(x - 1)(x + 1)} {x - 1} = x + 1 \) (para \( x \neq 1 \)), y cuando \( x \to 1 \), el resultado tiende a 2.
-    </li>
-    <li class="texto">
-        <strong>Límite infinito:</strong>
-        <p class="examples texto">
-            \( \lim_{x \to 0^+} \frac{1} {x} = +\infty \)
-        </p>
-        <i>Explicación:</i> Cuando \( x \) se acerca a 0 por la derecha, \( \frac{1} {x} \) crece sin límite.
-    </li>
-</ul>
-<h3>Casos Especiales</h3>
-<ul>
-    <li class="texto">
-        <strong>Límite lateral:</strong><br>
-        <ul>
-            <li class="texto"></li>
-                Por la izquierda: \( \lim_{x \to a^-} f(x) \) significa que \( x \) se aproxima a \( a \) desde valores menores.
-            </li>
-            <li class="texto">
-                Por la derecha: \( \lim_{x \to a^+} f(x) \) significa que \( x \) se aproxima a \( a \) desde valores mayores.<br>
-                El límite existe solo si ambos laterales son iguales. 
-            </li>
-        </ul>
-    </li>
-    <li class="texto">
-        <strong>Límite en el infinito:</strong><br>
-        Describe el comportamiento de una función cuando \( x \) tiende a infinito.
-        <p class="examples texto">
-            \( \lim_{x \to +\infty} \frac{1} {x} = 0 \)
-        </p>
-    </li>
+    <h3>Pasos para calcular un límite</h3>
+    <ol>
+        <li class="texto"> <strong>Intentar la sustitución directa:</strong> Reemplaza \( x \) por el valor al que tiende (por ejemplo, \( a \)). Si obtienes un número definido, ese es el límite.</li>
+        <li class="texto"> <strong>Si obtienes una indeterminación (como 0/0):</strong> Simplifica la expresión, factoriza o racionaliza para eliminar la indeterminación.</li>
+        <li class="texto"> <strong>Usar límites laterales:</strong> Evalúa los límites desde la izquierda (\( x \to a^- \)) y desde la derecha (\( x \to a^+ \)) para ver si coinciden.</li>
+        <li class="texto"> <strong>Considerar el comportamiento infinito:</strong> Si \( x \to \infty \) o \( x \to -\infty \), analiza cómo se comporta la función para valores muy grandes.</li>
+    </ol>
+
+    <h3>Ejemplos prácticos</h3>
+    <ul>
+        <li class="texto">
+            <strong>Límite básico:</strong>
+            <p class="examples texto" style="margin-left: 20px;">
+                \( \lim_{x \to 2} (3x + 1) = 7 \)
+            </p>
+            <i>Explicación:</i> Sustitución directa: \( 3(2) + 1 = 7 \).
+        </li>
+        <li class="texto">
+            <strong>Límite con indeterminación:</strong>
+            <p class="examples texto" style="margin-left: 20px;">
+                \( \lim_{x \to 1} \frac{x^2 - 1}{x - 1} \)
+            </p>
+            <i>Explicación:</i> Directa da 0/0. Factorizamos: \( \frac{(x-1)(x+1)}{x-1} = x + 1 \), para \( x \neq 1 \). Entonces el límite es \( 1 + 1 = 2 \).
+        </li>
+        <li class="texto">
+            <strong>Límite infinito:</strong>
+            <p class="examples texto" style="margin-left: 20px;">
+                \( \lim_{x \to 0^+} \frac{1}{x} = +\infty \)
+            </p>
+            <i>Explicación:</i> Cuando \( x \) se acerca a 0 desde la derecha, \( \frac{1}{x} \) crece sin límite.
+        </li>
+        <li class="texto">
+            <strong>Límite en infinito:</strong>
+            <p class="examples texto" style="margin-left: 20px;">
+                \( \lim_{x \to +\infty} \frac{5x + 3}{2x - 1} = \frac{5}{2} \)
+            </p>
+            <i>Explicación:</i> Dividimos numerador y denominador entre \( x \) y aplicamos límite:
+            \( \frac{5 + \frac{3}{x}}{2 - \frac{1}{x}} \to \frac{5}{2} \).
+        </li>
+    </ul>
+
+    <h3>Casos Especiales</h3>
+    <ul>
+        <li class="texto">
+            <strong>Límite lateral:</strong>
+            <ul>
+                <li class="texto">
+                    Por la izquierda: \( \lim_{x \to a^-} f(x) \) significa que \( x \) se aproxima a \( a \) desde valores menores.
+                </li>
+                <li class="texto">
+                    Por la derecha: \( \lim_{x \to a^+} f(x) \) significa que \( x \) se aproxima a \( a \) desde valores mayores.<br />
+                    El límite existe solo si ambos laterales son iguales.
+                </li>
+            </ul>
+        </li>
+        <li class="texto">
+            <strong>Límite en el infinito:</strong><br />
+            Describe el comportamiento de una función cuando \( x \) tiende a infinito.
+            <p class="examples texto" style="margin-left: 20px;">
+                \( \lim_{x \to +\infty} \frac{1}{x} = 0 \)
+            </p>
+        </li>
+    </ul>
+</body>
 </html>
