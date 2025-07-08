@@ -81,25 +81,155 @@
 </div>
 
 <div id="resolucion-d7">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = \ln(x + \sqrt{a^2 + x^2}) \)</p>
+    <p class="texto">2. Aplicamos la regla de la cadena para logaritmos:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{x + \sqrt{a^2 + x^2}} \cdot \frac{d}{dx}(x + \sqrt{a^2 + x^2}) \)</p>
+    <p class="texto">3. Derivamos el argumento:</p>
+    <p class="texto examples">\( \frac{d}{dx}(x) = 1 \)</p>
+    <p class="texto examples">\( \frac{d}{dx}(\sqrt{a^2 + x^2}) = \frac{1}{2}(a^2 + x^2)^{-1/2} \cdot 2x = \frac{x}{\sqrt{a^2 + x^2}} \)</p>
+    <p class="texto">4. Combinamos los resultados:</p>
+    <p class="texto examples">\( f'(x) = \frac{1 + \frac{x}{\sqrt{a^2 + x^2}}}{x + \sqrt{a^2 + x^2}} \)</p>
+    <p class="texto">5. Simplificamos la expresión:</p>
+    <p class="texto examples">\( f'(x) = \frac{\frac{\sqrt{a^2 + x^2} + x}{\sqrt{a^2 + x^2}}}{x + \sqrt{a^2 + x^2}} = \frac{1}{\sqrt{a^2 + x^2}} \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{\sqrt{a^2 + x^2}} \)</p>
 </div>
 
 <div id="resolucion-d8">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = \sqrt{a^2 - x^2} + a \cdot \text{Arcsen}\left(\frac{x}{a}\right) \)</p>
+    <p class="texto">2. Derivamos cada término por separado:</p>
+    <p class="texto">Primer término (\(\sqrt{a^2 - x^2}\)):</p>
+    <p class="texto examples">\( \frac{d}{dx} \sqrt{a^2 - x^2} = \frac{1}{2}(a^2 - x^2)^{-1/2} \cdot (-2x) = \frac{-x}{\sqrt{a^2 - x^2}} \)</p>
+    <p class="texto">Segundo término (\(a \cdot \text{Arcsen}(x/a)\)):</p>
+    <p class="texto examples">\( \frac{d}{dx} \left[a \cdot \text{Arcsen}\left(\frac{x}{a}\right)\right] = a \cdot \frac{1}{\sqrt{1 - \left(\frac{x}{a}\right)^2}} \cdot \frac{1}{a} = \frac{1}{\sqrt{1 - \frac{x^2}{a^2}}} \)</p>
+    <p class="texto examples">Simplificando: \( \frac{1}{\sqrt{\frac{a^2 - x^2}{a^2}}} = \frac{a}{\sqrt{a^2 - x^2}} \)</p>
+    <p class="texto">3. Sumamos ambas derivadas:</p>
+    <p class="texto examples">\( f'(x) = \frac{-x}{\sqrt{a^2 - x^2}} + \frac{a}{\sqrt{a^2 - x^2}} = \frac{a - x}{\sqrt{a^2 - x^2}} \)</p>
 </div>
 
 <div id="resolucion-d9">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = \frac{1}{3} \ln\left(\frac{x^2 - 2x + 1}{x^2 + x + 1}\right) \)</p>
+    <p class="texto">2. Aplicamos propiedades de logaritmos:</p>
+    <p class="texto examples">\( f(x) = \frac{1}{3} \left[ \ln(x^2 - 2x + 1) - \ln(x^2 + x + 1) \right] \)</p>
+    <p class="texto">3. Derivamos cada término:</p>
+    <p class="texto">Primer término (\(\ln(x^2 - 2x + 1)\)):</p>
+    <p class="texto examples">\( \frac{d}{dx} \ln(x^2 - 2x + 1) = \frac{2x - 2}{x^2 - 2x + 1} \)</p>
+    <p class="texto">Simplificamos: \( \frac{2(x - 1)}{(x - 1)^2} = \frac{2}{x - 1} \) (para \(x \neq 1\))</p>
+    <p class="texto">Segundo término (\(\ln(x^2 + x + 1)\)):</p>
+    <p class="texto examples">\( \frac{d}{dx} \ln(x^2 + x + 1) = \frac{2x + 1}{x^2 + x + 1} \)</p>
+    <p class="texto">4. Combinamos los resultados:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{3} \left[ \frac{2}{x - 1} - \frac{2x + 1}{x^2 + x + 1} \right] \)</p>
+    <p class="texto">5. Unificamos bajo común denominador (\(x^3 - 1\)):</p>
+    <p class="texto examples">\( \frac{2}{x - 1} = \frac{2(x^2 + x + 1)}{x^3 - 1} \)</p>
+    <p class="texto examples">\( \frac{2x + 1}{x^2 + x + 1} = \frac{(2x + 1)(x - 1)}{x^3 - 1} \)</p>
+    <p class="texto">6. Simplificamos el numerador:</p>
+    <p class="texto examples">\( 2(x^2 + x + 1) - (2x + 1)(x - 1) = 3x + 3 \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( f'(x) = \frac{1}{3} \cdot \frac{3(x + 1)}{x^3 - 1} = \frac{x + 1}{x^3 - 1} \)</p>
 </div>
 
 <div id="resolucion-d10">
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
-    <p class="texto examples"></p>
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = x^2 - 6x + 3 \)</p>
+    <p class="texto">2. Aplicamos reglas de derivación:</p>
+    <p class="texto examples">\( f'(x) = \frac{d}{dx}(x^2) - \frac{d}{dx}(6x) + \frac{d}{dx}(3) \)</p>
+    <p class="texto">3. Calculamos cada derivada:</p>
+    <p class="texto examples">\( \frac{d}{dx}(x^2) = 2x \)</p>
+    <p class="texto examples">\( \frac{d}{dx}(6x) = 6 \)</p>
+    <p class="texto examples">\( \frac{d}{dx}(3) = 0 \)</p>
+    <p class="texto">4. Derivada general:</p>
+    <p class="texto examples">\( f'(x) = 2x - 6 \)</p>
+    <p class="texto">5. Evaluamos en \( x = 5 \):</p>
+    <p class="texto examples">\( f'(5) = 2(5) - 6 = 10 - 6 = 4 \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">La derivada en \( x = 5 \) es \( 4 \).</p>
+</div>
+
+<div id="resolucion-d11">
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = \frac{x - 1}{x + 1} \)</p>
+    <p class="texto">2. Aplicamos la regla del cociente:</p>
+    <p class="texto examples">\( f'(x) = \frac{(1)(x + 1) - (x - 1)(1)}{(x + 1)^2} \)</p>
+    <p class="texto">3. Simplificamos el numerador:</p>
+    <p class="texto examples">\( (x + 1) - (x - 1) = 2 \)</p>
+    <p class="texto">4. Derivada general:</p>
+    <p class="texto examples">\( f'(x) = \frac{2}{(x + 1)^2} \)</p>
+    <p class="texto">5. Evaluamos en \( x = 0 \):</p>
+    <p class="texto examples">\( f'(0) = \frac{2}{(0 + 1)^2} = 2 \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">La derivada en \( x = 0 \) es \( 2 \).</p>
+</div>
+
+<div id="resolucion-d12">
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = e^x \sin(x) \)</p>
+    <p class="texto">2. Aplicamos la regla del producto:</p>
+    <p class="texto examples">\( f'(x) = \frac{d}{dx}(e^x) \cdot \sin(x) + e^x \cdot \frac{d}{dx}(\sin(x)) \)</p>
+    <p class="texto">3. Calculamos las derivadas individuales:</p>
+    <p class="texto examples">\( \frac{d}{dx}(e^x) = e^x \)</p>
+    <p class="texto examples">\( \frac{d}{dx}(\sin(x)) = \cos(x) \)</p>
+    <p class="texto">4. Derivada general:</p>
+    <p class="texto examples">\( f'(x) = e^x \sin(x) + e^x \cos(x) = e^x (\sin(x) + \cos(x)) \)</p>
+    <p class="texto">5. Evaluamos en \( x = 0 \):</p>
+    <p class="texto examples">\( f'(0) = e^0 (\sin(0) + \cos(0)) = 1 (0 + 1) = 1 \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">La derivada en \( x = 0 \) es \( 1 \).</p>
+</div>
+
+<div id="resolucion-d13">
+    <p class="texto">1. Función original:</p>
+    <p class="texto examples">\( f(x) = \frac{x^2 - 1}{x^2 + 1} \)</p>
+    <p class="texto">2. Primera derivada (regla del cociente):</p>
+    <p class="texto examples">\( f'(x) = \frac{(2x)(x^2 + 1) - (x^2 - 1)(2x)}{(x^2 + 1)^2} \)</p>
+    <p class="texto examples">Simplificando numerador: \( 2x^3 + 2x - 2x^3 + 2x = 4x \)</p>
+    <p class="texto examples">\( f'(x) = \frac{4x}{(x^2 + 1)^2} \)</p>
+    <p class="texto">3. Segunda derivada (nuevamente regla del cociente):</p>
+    <p class="texto examples">\( f''(x) = \frac{(4)(x^2 + 1)^2 - 4x \cdot 2(x^2 + 1)(2x)}{(x^2 + 1)^4} \)</p>
+    <p class="texto">4. Simplificamos numerador y denominador:</p>
+    <p class="texto examples">Numerador: \( 4(x^2 + 1)^2 - 16x^2(x^2 + 1) = 4(x^2 + 1)(x^2 + 1 - 4x^2) \)</p>
+    <p class="texto examples">\( = 4(x^2 + 1)(-3x^2 + 1) \)</p>
+    <p class="texto examples">Denominador: \( (x^2 + 1)^4 = (x^2 + 1)^3 \cdot (x^2 + 1) \)</p>
+    <p class="texto">5. Factor común y simplificación final:</p>
+    <p class="texto examples">\( f''(x) = \frac{4(x^2 + 1)(-3x^2 + 1)}{(x^2 + 1)^4} = \frac{4(-3x^2 + 1)}{(x^2 + 1)^3} \)</p>
+    <p class="texto">Resultado final:</p>
+    <p class="texto examples">\( f''(x) = \frac{-12x^2 + 4}{(x^2 + 1)^3} \)</p>
+</div>
+
+<div id="resolucion-d14">
+    <p class="texto">Calcular la segunda derivada de la función:</p>
+    <p class="texto examples">\( f(x) = x^5 \ln(x) \)</p>
+    <p class="texto">1. Primera derivada (usando la regla del producto):</p>
+    <p class="texto examples">\( f'(x) = \frac{d}{dx}[x^5] \cdot \ln(x) + x^5 \cdot \frac{d}{dx}[\ln(x)] \)</p>
+    <p class="texto examples">\( f'(x) = 5x^4 \ln(x) + x^5 \cdot \frac{1}{x} = 5x^4 \ln(x) + x^4 \)</p>
+    <p class="texto">2. Segunda derivada:</p>
+    <p class="texto examples">\( f''(x) = \frac{d}{dx}[5x^4 \ln(x)] + \frac{d}{dx}[x^4] \)</p>
+    <p class="texto">Aplicamos nuevamente la regla del producto al primer término:</p>
+    <p class="texto examples">\( \frac{d}{dx}[5x^4 \ln(x)] = 20x^3 \ln(x) + 5x^4 \cdot \frac{1}{x} = 20x^3 \ln(x) + 5x^3 \)</p>
+    <p class="texto examples">\( \frac{d}{dx}[x^4] = 4x^3 \)</p>
+    <p class="texto">Sumamos ambos resultados:</p>
+    <p class="texto examples">\( f''(x) = 20x^3 \ln(x) + 5x^3 + 4x^3 = 20x^3 \ln(x) + 9x^3 \)</p>
+    <p class="texto">3. Resultado final:</p>
+    <p class="texto examples">\( 20x^3 \ln(x) + 9x^3 \)</p>
+</div>
+
+<div id="resolucion-d15">
+    <p class="texto">Derivar la función implícita:</p>
+    <p class="texto examples">\( x^3y^5 + y^2 - x^4 = 0 \)</p>
+    <p class="texto">1. Aplicar derivación implícita a ambos lados:</p>
+    <p class="texto examples">\( \frac{d}{dx}(x^3y^5) + \frac{d}{dx}(y^2) - \frac{d}{dx}(x^4) = 0 \)</p>
+    <p class="texto">2. Derivar cada término (usando regla del producto donde sea necesario):</p>
+    <p class="texto examples">\( \frac{d}{dx}(x^3y^5) = 3x^2y^5 + x^3 \cdot 5y^4 \frac{dy}{dx} \)</p>
+    <p class="texto examples">\( \frac{d}{dx}(y^2) = 2y \frac{dy}{dx} \)</p>
+    <p class="texto examples">\( \frac{d}{dx}(x^4) = 4x^3 \)</p>
+    <p class="texto">3. Sustituir y agrupar términos con \( \frac{dy}{dx} \):</p>
+    <p class="texto examples">\( 3x^2y^5 + 5x^3y^4 \frac{dy}{dx} + 2y \frac{dy}{dx} - 4x^3 = 0 \)</p>
+    <p class="texto">4. Aislar \( \frac{dy}{dx} \):</p>
+    <p class="texto examples">\( \frac{dy}{dx}(5x^3y^4 + 2y) = 4x^3 - 3x^2y^5 \)</p>
+    <p class="texto examples">\( \frac{dy}{dx} = \frac{4x^3 - 3x^2y^5}{5x^3y^4 + 2y} \)</p>
+    <p class="texto">5. Resultado final:</p>
+    <p class="texto examples">\( \dfrac{4x^3 - 3x^2y^5}{5x^3y^4 + 2y} \)
+    </p>
 </div>

@@ -5,5 +5,5 @@ if ('requestIdleCallback' in window) {
 } else {
     setTimeout(() => {
         import('./core.js').then(m => m.inicializarApp());
-    }, 300); // Cambio de 500 a 300
+    }, 300);
 }

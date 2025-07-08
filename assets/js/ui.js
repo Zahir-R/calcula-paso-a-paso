@@ -1,5 +1,5 @@
 import { preguntas } from './preguntas.js';
-import { capitalizar } from './utils.js';
+import { capitalizar, ensureMathJaxLoaded } from './utils.js';
 import { setTimer } from './state.js';
 
 let respuestasUsuario = [];
@@ -39,7 +39,10 @@ export function mostrarPreguntas(lista, esSimulacro) {
     document.getElementById('resultSection').style.display = 'none';
 
     document.getElementById('submitBtn').onclick = () => corregir(lista, esSimulacro);
-    if (window.MathJax) MathJax.typesetPromise();
+    
+    ensureMathJaxLoaded(() => {
+        MathJax.typesetPromise();
+    });
 }
 
 function corregir(lista, esSimulacro) {
@@ -100,7 +103,10 @@ function corregir(lista, esSimulacro) {
     document.getElementById('contentSection').style.display = 'none';
 
     if (timer) clearInterval(timer);
-    if (window.MathJax) MathJax.typesetPromise();
+    
+    ensureMathJaxLoaded(() => {
+        MathJax.typesetPromise();
+    });
 
     document.querySelectorAll('.show-solution-btn').forEach(btn => {
         btn.onclick = () => mostrarResolucion(parseInt(btn.dataset.index), lista);
@@ -147,7 +153,9 @@ async function mostrarResolucion(idx, lista) {
         document.body.style.overflow = '';
     };
 
-    if (window.MathJax) MathJax.typesetPromise([modal]);
+    ensureMathJaxLoaded(() => {
+        MathJax.typesetPromise();
+    });
 }
 
 function iniciarTemporizador() {
