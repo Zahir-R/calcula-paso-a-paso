@@ -4,18 +4,18 @@ import { iniciarPractica } from './practica.js';
 import { iniciarSimulacro } from './simulacro.js';
 
 export async function inicializarApp() {
-    const modeSelector = document.getElementById('mode');
-    const topicSelector = document.getElementById('topic');
+    const selectorModo = document.getElementById('modo');
+    const selectorTema = document.getElementById('tema');
     const startBtn = document.getElementById('startBtn');
 
-    let modo = modeSelector.value || "estudio";     // Pick user's input or estudio as default
-    let tema = topicSelector.value || "funciones";  // Pick user's input or funciones as default
+    let modo = selectorModo.value || "estudio";     // Tomar el input del usuario o estudio como predeterminado
+    let tema = selectorTema.value || "funciones";  // Tomar el input del usuario o funciones como predeterminado
 
-    topicSelector.disabled = (modo === 'simulacro');  // Disable the topic selector based on modo value
+    selectorTema.disabled = (modo === 'simulacro');  // Desactivar el selector de temas según el modo
 
-    modeSelector.addEventListener('change', () => {
-        modo = modeSelector.value;
-        topicSelector.disabled = (modo === 'simulacro');
+    selectorModo.addEventListener('change', () => {
+        modo = selectorModo.value;
+        selectorTema.disabled = (modo === 'simulacro');
     });
 
     startBtn.disabled = true;
@@ -28,8 +28,8 @@ try {
     }
 
     startBtn.addEventListener('click', () => {
-        tema = topicSelector.value;
-        modo = modeSelector.value;
+        tema = selectorTema.value;
+        modo = selectorModo.value;
         if (modo === 'estudio') mostrarTeoria(tema);
         else if (modo === 'practica') iniciarPractica(tema);
         else if (modo === 'simulacro') iniciarSimulacro();

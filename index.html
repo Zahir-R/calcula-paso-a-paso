@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Salvar Cálculo</title>
+    <title>Calcula Paso A Paso</title>
     <meta name="description" content="Página que te ayuda a repasar Cálculo I">
     
-    <!-- Critical CSS -->
+    <!-- CSS Crítico -->
     <style>
         body { font-family: Arial, sans-serif; background: #f7f7fa; margin: 0; padding: 0; }
         main { max-width: 700px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; }
@@ -17,26 +17,26 @@
         ul, ol {list-style: none;}
     </style>
     
-    <!-- Non-critical CSS async -->
+    <!-- CSS no crítico asíncrono -->
     <link rel="stylesheet" href="./assets/css/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
-    <!-- Preload resources -->
+    <!-- Precargar recursos -->
     <link rel="preload" href="./assets/js/main.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" as="script">
 </head>
 <body>
     <main>
-        <h1>Proyecto Salvar Cálculo</h1>
-        <section id="modeSelector">
-            <label for="mode">Selecciona un modo:</label>
-            <select id="mode">
+        <h1>Calcula Paso A Paso</h1>
+        <section id="selectorModo">
+            <label for="modo">Selecciona un modo:</label>
+            <select id="modo">
                 <option value="estudio">Estudio</option>
                 <option value="practica">Práctica</option>
                 <option value="simulacro">Simulacro</option>
             </select>
-            <label for="topic">Tema:</label>
-            <select id="topic">
+            <label for="tema">Tema:</label>
+            <select id="tema">
                 <option value="funciones">Funciones</option>
                 <option value="limites">Límites</option>
                 <option value="derivadas">Derivadas</option>
@@ -44,8 +44,8 @@
             </select>
             <button id="startBtn">Comenzar</button>
         </section>
-        <section id="contentSection" style="display:none;"></section>
-        <section id="resultSection" style="display:none;"></section>
+        <section id="seccionContenido" style="display:none;"></section>
+        <section id="seccionResultados" style="display:none;"></section>
     </main>
     
     <script type="module" src="./assets/js/main.js"></script>

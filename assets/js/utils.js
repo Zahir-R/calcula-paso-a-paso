@@ -6,7 +6,7 @@ export function mezclarArray(arr) {
     return arr.map(v => [v, Math.random()]).sort((a, b) => a[1] - b[1]).map(v => v[0]);
 }
 
-export function ensureMathJaxLoaded(callback) {
+export function cargarMathJax(callback) {
     if (window.MathJax) {
         callback();
     } else {

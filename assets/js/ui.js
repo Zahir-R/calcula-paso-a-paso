@@ -1,9 +1,9 @@
 import { preguntas } from './preguntas.js';
-import { capitalizar, ensureMathJaxLoaded } from './utils.js';
-import { setTimer } from './state.js';
+import { capitalizar, cargarMathJax } from './utils.js';
+import { programarTemporizador } from './state.js';
 
 let respuestasUsuario = [];
-let timer = null;
+let temporizador = null;
 let preguntasActuales = [];
 let tiempoRestante = 0;
 
@@ -14,10 +14,10 @@ export function mostrarPreguntas(lista, esSimulacro) {
 
     if (esSimulacro) {
         tiempoRestante = 1800;
-        if (timer) clearInterval(timer); // Detener temporizador anterior si existe
+        if (temporizador) clearInterval(temporizador); // Detener temporizador anterior si existe
         iniciarTemporizador();
-        setTimer(timer); // Actualizar el temporizador global
-        html += `<div id="timer">Tiempo restante: <span id="tiempo">${mostrarTiempoRestante(tiempoRestante)}</span> s</div>`;
+        programarTemporizador(temporizador); // Actualizar el temporizador global
+        html += `<div id="temporizador">Tiempo restante: <span id="tiempo">${mostrarTiempoRestante(tiempoRestante)}</span> s</div>`;
     }
 
     lista.forEach((q, i) => {
@@ -33,14 +33,14 @@ export function mostrarPreguntas(lista, esSimulacro) {
     });
 
     html += `<button id="submitBtn">Finalizar</button>`;
-    const contentSection = document.getElementById('contentSection');
-    contentSection.innerHTML = html;
-    contentSection.style.display = 'block';
-    document.getElementById('resultSection').style.display = 'none';
+    const seccionContenido = document.getElementById('seccionContenido');
+    seccionContenido.innerHTML = html;
+    seccionContenido.style.display = 'block';
+    document.getElementById('seccionResultados').style.display = 'none';
 
     document.getElementById('submitBtn').onclick = () => corregir(lista, esSimulacro);
     
-    ensureMathJaxLoaded(() => {
+    cargarMathJax(() => {
         MathJax.typesetPromise();
     });
 }
@@ -56,33 +56,33 @@ function corregir(lista, esSimulacro) {
     let detalle = '';
 
     lista.forEach((q, i) => {
-        const userAnswerIndex = respuestasUsuario[i];
-        const isCorrect = userAnswerIndex === q.respuesta;
-        if (isCorrect) {
+        const indiceRespuestas = respuestasUsuario[i];
+        const esCorrecta = indiceRespuestas === q.respuesta;
+        if (esCorrecta) {
             correctas++;
         } else {
             const temaPregunta = obtenerTemaPregunta(q);
             feedback[temaPregunta] = (feedback[temaPregunta] || 0) + 1;
         }
 
-        detalle += `<div class="question-feedback ${isCorrect ? 'correct' : 'incorrect'}">
+        detalle += `<div class="question-feedback ${esCorrecta ? 'rCorrecta' : 'rIncorrecta'}">
             <h4>Pregunta ${i + 1}: ${q.pregunta}</h4>
             <div class="options-feedback">`;
 
         q.opciones.forEach((op, j) => {
             let optionClass = '';
-            if (j === q.respuesta) optionClass = 'correct-answer';
-            else if (j === userAnswerIndex) optionClass = 'user-answer';
+            if (j === q.respuesta) optionClass = 'respuesta-correcta';
+            else if (j === indiceRespuestas) optionClass = 'respuesta-usuario';
 
             detalle += `<div class="option ${optionClass}">
                 ${op}
                 ${j === q.respuesta ? '<span class="feedback-icon">✓</span>' : ''}
-                ${j === userAnswerIndex && !isCorrect ? '<span class="feedback-icon">✗</span>' : ''}
+                ${j === indiceRespuestas && !esCorrecta ? '<span class="feedback-icon">✗</span>' : ''}
             </div>`;
         });
 
         detalle += `</div>
-            <button class="show-solution-btn" data-index="${i}">Mostrar resolución paso a paso</button>
+            <button class="mostrar-solucion" data-index="${i}">Mostrar resolución paso a paso</button>
         </div>`;
     });
 
@@ -97,18 +97,18 @@ function corregir(lista, esSimulacro) {
         resultado += '</ul>';
     }
 
-    const resultSection = document.getElementById('resultSection');
-    resultSection.innerHTML = resultado;
-    resultSection.style.display = 'block';
-    document.getElementById('contentSection').style.display = 'none';
+    const seccionResultados = document.getElementById('seccionResultados');
+    seccionResultados.innerHTML = resultado;
+    seccionResultados.style.display = 'block';
+    document.getElementById('seccionContenido').style.display = 'none';
 
-    if (timer) clearInterval(timer);
+    if (temporizador) clearInterval(temporizador);
     
-    ensureMathJaxLoaded(() => {
+    cargarMathJax(() => {
         MathJax.typesetPromise();
     });
 
-    document.querySelectorAll('.show-solution-btn').forEach(btn => {
+    document.querySelectorAll('.mostrar-solucion').forEach(btn => {
         btn.onclick = () => mostrarResolucion(parseInt(btn.dataset.index), lista);
     });
 }
@@ -141,40 +141,40 @@ async function mostrarResolucion(idx, lista) {
     modal.innerHTML = `
         <div class="modal-content">
             <h3>Resolución paso a paso</h3>
-            <div class="resolucion-text">${resolHtml}</div>
-            <button class="close-modal-btn">Volver a revisión</button>
+            <div class="texto-resolucion">${resolHtml}</div>
+            <button class="cerrar-modal">Volver a revisión</button>
         </div>
     `;
     document.body.appendChild(modal);
     document.body.style.overflow = 'hidden';
 
-    modal.querySelector('.close-modal-btn').onclick = () => {
+    modal.querySelector('.cerrar-modal').onclick = () => {
         document.body.removeChild(modal);
         document.body.style.overflow = '';
     };
 
-    ensureMathJaxLoaded(() => {
+    cargarMathJax(() => {
         MathJax.typesetPromise();
     });
 }
 
 function iniciarTemporizador() {
-    timer = setInterval(() => {
+    temporizador = setInterval(() => {
         document.getElementById('tiempo').textContent = mostrarTiempoRestante(tiempoRestante - 1);
         tiempoRestante--;
         if (tiempoRestante <= 0) {
-            clearInterval(timer);
-            setTimer(null);
+            clearInterval(temporizador);
+            programarTemporizador(null);
             corregir(preguntasActuales, true);
         }
     }, 1000);
-    setTimer(timer); // Actualizar el temporizador global
+    programarTemporizador(temporizador); // Actualizar el temporizador global
 }
 
 function mostrarTiempoRestante(segundosRestantes){
-    const minutes = Math.floor(segundosRestantes / 60);
+    const minutos = Math.floor(segundosRestantes / 60);
     const segundos = segundosRestantes % 60;
-    return `${minutes.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    return `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
 }
 
 function obtenerTemaPregunta(q) {

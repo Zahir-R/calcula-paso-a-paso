@@ -1,4 +1,4 @@
-export let nTimer = null;
-export function setTimer(newTimer){
-    nTimer = newTimer;
+export let nTemporizador = null;
+export function programarTemporizador(nuevoTemporizador){
+    nTemporizador = nuevoTemporizador;
 }

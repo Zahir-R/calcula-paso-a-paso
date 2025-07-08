@@ -1,17 +1,17 @@
 import { preguntas } from './preguntas.js';
 import { mezclarArray } from './utils.js';
 import { mostrarPreguntas } from './ui.js';
-import { nTimer, setTimer } from './state.js';
+import { nTemporizador, programarTemporizador } from './state.js';
 
 export function iniciarSimulacro() {
     // Detener cualquier temporizador anterior
-    if (nTimer) clearInterval(nTimer);
-    setTimer(null);
+    if (nTemporizador) clearInterval(nTemporizador);
+    programarTemporizador(null);
 
     let todas = [];
     Object.keys(preguntas).forEach(t => {
-        const maxQuestions = mezclarArray(preguntas[t]).slice(0, 4);
-        todas = todas.concat(maxQuestions);
+        const preguntasMaximas = mezclarArray(preguntas[t]).slice(0, 4);
+        todas = todas.concat(preguntasMaximas);
     });
 
     const seleccionadas = mezclarArray(todas).slice(0, 10);

@@ -20,7 +20,7 @@ h1 {
     color: #333;
     line-height: 1.6;
 }
-#modeSelector {
+#selectorModo {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -28,7 +28,7 @@ h1 {
     margin-bottom: 2rem;
     flex-wrap: wrap;
 }
-#contentSection, #resultSection {
+#seccionContenido, #seccionResultados {
     margin: 1.5rem 0;
 }
 .pregunta {
@@ -50,12 +50,12 @@ button {
 button:hover {
     background: #3b4a6b;
 }
-#timer {
+#temporizador {
     font-weight: bold;
     color: #c0392b;
     margin-bottom: 1rem;
 }
-#resultSection ul {
+#seccionResultados ul {
     list-style: disc inside;
     color: #c0392b;
 }
@@ -92,12 +92,12 @@ label {
     border-radius: 5px;
 }
 
-.correct {
+.rCorrecta {
     background-color: #e8f5e9;
     border-left: 4px solid #4caf50;
 }
 
-.incorrect {
+.rIncorrecta {
     background-color: #ffebee;
     border-left: 4px solid #f44336;
 }
@@ -115,12 +115,12 @@ label {
     overflow-y: hidden;
 }
 
-.correct-answer {
+.respuesta-correcta {
     background-color: #c8e6c9;
     font-weight: bold;
 }
 
-.user-answer:not(.correct-answer) {
+.respuesta-usuario:not(.respuesta-correcta) {
     background-color: #ffcdd2;
     text-decoration: line-through;
 }
@@ -174,12 +174,12 @@ label {
     overflow-y: auto;
     overflow-x: auto;
 }
-.resolucion-text {
+.texto-resolucion {
     margin: 1rem 0 2rem 0;
     color: #2c3e50;
     font-size: 1.1em;
 }
-.close-modal-btn {
+.cerrar-modal {
     background: #2a3a5a;
     color: #fff;
     border: none;
@@ -189,14 +189,14 @@ label {
     cursor: pointer;
     margin-top: 1rem;
 }
-.close-modal-btn:hover {
+.cerrar-modal:hover {
     background: #3b4a6b;
 }
 @media (max-width: 600px) {
     main {
         padding: 1rem;
     }
-    #modeSelector {
+    #selectorModo {
         flex-direction: column;
         gap: 0.5rem;
     }
