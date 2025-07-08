@@ -1,8 +1,8 @@
-# Proyecto Salvar Cálculo
+# Calcula Paso A Paso
 
 Herramienta interactiva para practicar cálculo diferencial e integral, diseñada para estudiantes universitarios. Incluye modos de estudio, práctica y simulacro con retroalimentación inmediata.
 
-**[Ver en vivo](https://zahir-r.github.io/salvar-calculo/)**
+**[Ver en vivo](https://zahir-r.github.io/calcula-paso-a-paso/)**
 
 ## Características principales
 
@@ -31,7 +31,7 @@ Herramienta interactiva para practicar cálculo diferencial e integral, diseñad
 
 ## Estructura del proyecto
 ```
-salvar-calculo/
+calcula-paso-a-paso/
 ├── assets/
 │ ├── css/               # Estilos principales
 │ ├── js/                # Código modularizado
