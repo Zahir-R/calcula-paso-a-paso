@@ -6,6 +6,7 @@ let respuestasUsuario = [];
 let temporizador = null;
 let preguntasActuales = [];
 let tiempoRestante = 0;
+let deadline = 0;
 
 export function mostrarPreguntas(lista, esSimulacro) {
     preguntasActuales = lista;
@@ -14,6 +15,7 @@ export function mostrarPreguntas(lista, esSimulacro) {
 
     if (esSimulacro) {
         tiempoRestante = 1800;
+        deadline = Date.now() + tiempoRestante * 1000;
         if (temporizador) clearInterval(temporizador); // Detener temporizador anterior si existe
         iniciarTemporizador();
         programarTemporizador(temporizador); // Actualizar el temporizador global
@@ -180,7 +182,9 @@ async function mostrarResolucion(idx, lista) {
 function iniciarTemporizador() {
     // Actualiza el texto del temporizador cada segundo
     temporizador = setInterval(() => {
-        tiempoRestante--;
+        // Previene que el temporizador se congele cuando el usuario minimiza la ventana
+        const now = Date.now();
+        tiempoRestante = Math.max(0, Math.round((deadline - now) / 1000));
         document.getElementById('tiempo').textContent = mostrarTiempoRestante(tiempoRestante);
         // Cuando el temporizador llega a 0, se elimina el temporizador y se procede a corregir con las respuestas actuales
         if (tiempoRestante <= 0) {
