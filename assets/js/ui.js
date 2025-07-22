@@ -8,19 +8,30 @@ let preguntasActuales = [];
 let tiempoRestante = 0;
 let deadline = 0;
 
-export function mostrarPreguntas(lista, esSimulacro) {
+export function mostrarPreguntas(lista, esSimulacro, respuestasPrevias = null, restaurando = false) {
     preguntasActuales = lista;
-    respuestasUsuario = Array(lista.length).fill(null); // Si el usuario no terminó de responder, las respuestas se guardan como null
+    respuestasUsuario = respuestasPrevias || Array(lista.length).fill(null); // Si el usuario no terminó de responder, las respuestas se guardan como null
     let html = '';
 
     if (esSimulacro) {
-        tiempoRestante = 1800;
-        deadline = Date.now() + tiempoRestante * 1000;
+        if (!restaurando) {
+            tiempoRestante = 1800;
+            deadline = Date.now() + tiempoRestante * 1000;
+        }
         if (temporizador) clearInterval(temporizador); // Detener temporizador anterior si existe
         iniciarTemporizador();
         programarTemporizador(temporizador); // Actualizar el temporizador global
         html += `<div id="temporizador">Tiempo restante: <span id="tiempo">${mostrarTiempoRestante(tiempoRestante)}</span> s</div>`;
     }
+
+    const estadoSesion = {
+        preguntas: lista,
+        respuestas: respuestasUsuario,
+        esSimulacro,
+        deadline: esSimulacro ? deadline : null
+    };
+    localStorage.setItem('sesionActiva', JSON.stringify(estadoSesion));
+
 
     /*
     * Itera por cada pregunta en la lista, con su índice, para cada pregunta se crea un div con el índice y la pregunta
@@ -32,7 +43,7 @@ export function mostrarPreguntas(lista, esSimulacro) {
             <p><strong>${i + 1}. ${q.pregunta}</strong></p>
             ${q.opciones.map((op, j) => `
                 <label class="option-label">
-                    <input type="radio" name="p${i}" value="${j}">
+                    <input type="radio" name="p${i}" value="${j}" ${respuestasUsuario[i] === j ? "checked" : ""}>
                     <span">${op}</span>
                 </label><br>
             `).join('')}
@@ -46,6 +57,19 @@ export function mostrarPreguntas(lista, esSimulacro) {
     seccionContenido.style.display = 'block';
     document.getElementById('seccionResultados').style.display = 'none';
 
+    lista.forEach((q, i) => {
+        document.querySelectorAll(`input[name="p${i}"]`).forEach(input => {
+            input.addEventListener('change', (e) => {
+                respuestasUsuario[i] = parseInt(e.target.value);
+                const sesion = JSON.parse(localStorage.getItem('sesionActiva'));
+                if (sesion) {
+                    sesion.respuestas = respuestasUsuario;
+                    localStorage.setItem('sesionActiva', JSON.stringify(sesion));
+                }
+            });
+        });
+    });
+
     document.getElementById('submitBtn').onclick = () => corregir(lista, esSimulacro);
     
     cargarMathJax(() => {
@@ -53,13 +77,34 @@ export function mostrarPreguntas(lista, esSimulacro) {
     });
 }
 
-function corregir(lista, esSimulacro) {
-    // Para cada pregunta se selecciona el input del usuario i
-    // Si no seleccionó nada, se marca como null, y si marcó una respuesta, se almacena en respuestaasUsuario[i]
-    lista.forEach((q, i) => {
-        const seleccion = document.querySelector(`input[name='p${i}']:checked`);
-        respuestasUsuario[i] = seleccion ? parseInt(seleccion.value) : null;
-    });
+export function restaurarSesion(sesion) {
+    document.getElementById('selectorModo').style.display = 'none';
+
+    if (sesion.esSimulacro) {
+        tiempoRestante = Math.max(0, Math.round((sesion.deadline - Date.now()) / 1000));
+    
+        if (tiempoRestante > 0) {
+            deadline = sesion.deadline;
+            mostrarPreguntas(sesion.preguntas, true, sesion.respuestas, true);
+        } else {
+            corregir(sesion.preguntas, true, sesion.respuestas);
+        }
+    } else {
+        mostrarPreguntas(sesion.preguntas, false, sesion.respuestas);
+    }
+}
+
+function corregir(lista, esSimulacro, respuestasDadas = null) {
+    if (respuestasDadas) {
+        respuestasUsuario = respuestasDadas;
+    } else {
+        // Para cada pregunta se selecciona el input del usuario i
+        // Si no seleccionó nada, se marca como null, y si marcó una respuesta, se almacena en respuestasUsuario[i]
+        lista.forEach((q, i) => {
+            const seleccion = document.querySelector(`input[name='p${i}']:checked`);
+            respuestasUsuario[i] = seleccion ? parseInt(seleccion.value) : null;
+        });
+    }
 
     let correctas = 0;
     let feedback = {};
@@ -129,6 +174,8 @@ function corregir(lista, esSimulacro) {
     document.querySelectorAll('.mostrar-solucion').forEach(btn => {
         btn.onclick = () => mostrarResolucion(parseInt(btn.dataset.index), lista); // Muestra el modal según las preguntas actuales
     });
+
+    localStorage.removeItem('sesionActiva');
 }
 
 const resolucionCache = {};
@@ -186,6 +233,15 @@ function iniciarTemporizador() {
         const now = Date.now();
         tiempoRestante = Math.max(0, Math.round((deadline - now) / 1000));
         document.getElementById('tiempo').textContent = mostrarTiempoRestante(tiempoRestante);
+        
+        if (Date.now() % 5000 < 100) {
+            const sesion = JSON.parse(localStorage.getItem('sesionActiva'));
+            if (sesion) {
+                sesion.deadline = deadline;
+                localStorage.setItem('sesionActiva', JSON.stringify(sesion));
+            }
+        }
+
         // Cuando el temporizador llega a 0, se elimina el temporizador y se procede a corregir con las respuestas actuales
         if (tiempoRestante <= 0) {
             clearInterval(temporizador);

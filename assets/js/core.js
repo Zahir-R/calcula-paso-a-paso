@@ -2,6 +2,7 @@ import { cargarDatos } from './preguntas.js';
 import { mostrarTeoria } from './teoria.js';
 import { iniciarPractica } from './practica.js';
 import { iniciarSimulacro } from './simulacro.js';
+import { restaurarSesion } from './ui.js'
 
 export async function inicializarApp() {
     const selectorModo = document.getElementById('modo');
@@ -19,7 +20,18 @@ export async function inicializarApp() {
     });
 
     startBtn.disabled = true;
-try {
+
+    const sesionGuardada = localStorage.getItem('sesionActiva');
+    if (sesionGuardada) {
+        const sesion = JSON.parse(sesionGuardada);
+        if (confirm('¿Recuperar sesión anterior?')) {
+            await cargarDatos();
+            restaurarSesion(sesion);
+            return;
+        }
+    }
+
+    try {
         await cargarDatos();
         startBtn.disabled = false;
     } catch {
