@@ -2,6 +2,7 @@ import { capitalizar, cargarMathJax } from './utils.js';
 
 // Fetch de un tema seleccionado para extraer el texto de su html
 export function mostrarTeoria(tema) {
+    localStorage.removeItem('sesionActiva');
     const archivo = `./data/teoria/teoria${capitalizar(tema)}.html`;
     fetch(archivo)
         .then(res => res.text())

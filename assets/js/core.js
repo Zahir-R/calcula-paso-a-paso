@@ -53,6 +53,8 @@ export async function inicializarApp() {
                 startBtn.dataset.listener = 'true';
             }
             return;
+        } else {
+            localStorage.removeItem('sesionActiva');
         }
     }
 
