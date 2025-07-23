@@ -53,7 +53,7 @@ calcula-paso-a-paso/
 
 ## Ejecutar localmente
 ```
-git clone https://github.com/zahir-r/calcula-paso-a-paso.git
+git clone https://github.com/Zahir-R/calcula-paso-a-paso.git
 cd calcula-paso-a-paso
 # No se requieren dependencias - solo abrir index.html
 ```
