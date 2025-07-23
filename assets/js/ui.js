@@ -25,10 +25,10 @@ export function mostrarPreguntas(lista, esSimulacro, respuestasPrevias = null, r
     }
 
     const estadoSesion = {
-        preguntas: lista,
+        preguntas: lista.map(q => q.id),
         respuestas: respuestasUsuario,
         esSimulacro,
-        deadline: esSimulacro ? deadline : null
+        deadline: esSimulacro ? deadline : null,
     };
     localStorage.setItem('sesionActiva', JSON.stringify(estadoSesion));
 
@@ -78,19 +78,25 @@ export function mostrarPreguntas(lista, esSimulacro, respuestasPrevias = null, r
 }
 
 export function restaurarSesion(sesion) {
-    document.getElementById('selectorModo').style.display = 'none';
+    const listaPreguntas = sesion.preguntas.map(id => {
+        for (let t in preguntas) {
+            const q = preguntas[t].find(p => p.id === id);
+            if (q) return q;
+        }
+        return null;
+    }).filter(Boolean);
 
     if (sesion.esSimulacro) {
         tiempoRestante = Math.max(0, Math.round((sesion.deadline - Date.now()) / 1000));
     
         if (tiempoRestante > 0) {
             deadline = sesion.deadline;
-            mostrarPreguntas(sesion.preguntas, true, sesion.respuestas, true);
+            mostrarPreguntas(listaPreguntas, true, sesion.respuestas, true);
         } else {
-            corregir(sesion.preguntas, true, sesion.respuestas);
+            corregir(listaPreguntas, true, sesion.respuestas);
         }
     } else {
-        mostrarPreguntas(sesion.preguntas, false, sesion.respuestas);
+        mostrarPreguntas(listaPreguntas, false, sesion.respuestas);
     }
 }
 
